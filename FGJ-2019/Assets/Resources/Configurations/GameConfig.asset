@@ -16,3 +16,5 @@ MonoBehaviour:
     type: 2}
   containerPrefab: {fileID: 4395986411700506, guid: 2ec718a8798335f48b15fdffa2f944c4,
     type: 2}
+  playerPrefab: {fileID: 114861618396022474, guid: ebcebc0ec35130741a05b17e6872a167,
+    type: 2}

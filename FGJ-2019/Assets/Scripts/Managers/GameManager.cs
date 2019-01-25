@@ -13,8 +13,16 @@ public class GameManager : MonoBehaviour
     public GameConfig Config { get { return config; } }
 
     public static GameManager main;
+
+    [SerializeField]
+    private CameraManager cameraManager;
+
     void Awake() {
         main = this;
+    }
+
+    public void SetupPlayer(Player player) {
+        cameraManager.FollowPlayer(player.transform);
     }
 
     void Start()

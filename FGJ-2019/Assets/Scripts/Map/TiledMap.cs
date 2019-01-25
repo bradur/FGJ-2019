@@ -42,10 +42,6 @@ public class TiledMap : MonoBehaviour
         DrawLayers(map);
         SpawnObjects(map);
     }
-    /*private PlayerCharacter InstantiatePlayer()
-    {
-        return Instantiate(playerCharacterPrefab);
-    }*/
 
     private void DrawLayers(TmxMap map)
     {
@@ -91,29 +87,40 @@ public class TiledMap : MonoBehaviour
         int mapHeight = map.Height;
         foreach (TmxObjectGroup objectGroup in map.ObjectGroups)
         {
+            Transform container = GetContainer(objectGroup.Name);
             foreach (TmxObject tmxObject in objectGroup.Objects)
             {
                 int xPos = (int)(tmxObject.X);
-                int yPos = (int)(tmxObject.Y);
+                int yPos = (int)(-tmxObject.Y);
                 SpawnObject(
                     xPos,
                     yPos,
-                    tmxObject
+                    tmxObject,
+                    container
                 );
             }
         }
     }
 
-    private void SpawnObject(int x, int y, TmxObject tmxObject)
+    private void SpawnObject(int x, int y, TmxObject tmxObject, Transform container)
     {
         if (tmxObject.Tile != null)
         {
             Sprite sprite = GetTileSprite(tmxObject.Tile.Gid);
-            //GameObject spawnedObject = CreateObject(x, y, tmxObject, sprite);
+            GridObjectConfig objectConfig = GetObjectConfigByName(tmxObject.Type);
+            GridObject newObject = Instantiate(objectConfig.Prefab, container);
+
+            Vector2 tileSetSize = tiledMapTilesetManager.GetTileSetSize(tmxObject.Tile.Gid);
+            Vector2 objectPosition = new Vector2(
+                x / tileSetSize.x,
+                y / tileSetSize.y + 1 // unity position starts at bottom
+            );
+
+            newObject.Initialize(objectConfig, objectPosition);
         }
     }
 
-    /*private GridObjectConfig GetObjectConfigByName(string configName) {
+    private GridObjectConfig GetObjectConfigByName(string configName) {
         GridObjectConfig gridObjectConfig = null;
 
         foreach(GridObjectConfig config in gridObjectConfigs) {
@@ -123,7 +130,7 @@ public class TiledMap : MonoBehaviour
         }
 
         return gridObjectConfig;
-    }*/
+    }
 
     private Transform GetContainer(string containerName)
     {

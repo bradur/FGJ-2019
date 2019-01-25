@@ -19,4 +19,8 @@ public class GameConfig : ScriptableObject
     private Transform containerPrefab;
     public Transform ContainerPrefab { get { return containerPrefab; } }
 
+    [SerializeField]
+    private Player playerPrefab;
+    public Player PlayerPrefab { get { return playerPrefab; } }
+
 }
