@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9efcec6a44d5f2247a69bdf4fd349e7f, type: 3}
+  m_Name: GameConfig
+  m_EditorClassIdentifier: 
+  firstLevel: {fileID: 4900000, guid: 01383d76e4c7d9c4185ada479753445c, type: 3}
+  gridTilePrefab: {fileID: 114182515756426414, guid: 8e2fca2b9a26c0c479b3c65bec18bb85,
+    type: 2}
+  containerPrefab: {fileID: 4395986411700506, guid: 2ec718a8798335f48b15fdffa2f944c4,
+    type: 2}
