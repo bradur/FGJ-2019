@@ -7,12 +7,16 @@ public class Player : MonoBehaviour {
     public float moveSpeed = 20;
 
     Rigidbody2D rigidbody;
+    Animator anim;
+    SpriteRenderer renderer;
     
     Vector2 desiredMoveDirection;
 
 	// Use this for initialization
 	void Start () {
         rigidbody = gameObject.GetComponent<Rigidbody2D>();
+        anim = gameObject.GetComponent<Animator>();
+        renderer = gameObject.GetComponent<SpriteRenderer>();
 	}
 	
 	// Update is called once per frame
@@ -28,6 +32,25 @@ public class Player : MonoBehaviour {
 
         desiredMoveDirection = up * verticalAxis + right * horizontalAxis;
         rigidbody.velocity = desiredMoveDirection * moveSpeed;
+
+        if (rigidbody.velocity.magnitude > 0.001f)
+        {
+            anim.Play("walk");
+        } else
+        {
+            anim.Play("idle");
+        }
+
+        var horizontal_velocity = rigidbody.velocity.x;
+
+        if (horizontal_velocity > 0.001f)
+        {
+            renderer.flipX = false;
+        }
+        if (horizontal_velocity < -0.001f)
+        {
+            renderer.flipX = true;
+        }
     }
 
     private void FixedUpdate()
