@@ -12,11 +12,11 @@ public class GridObject : MonoBehaviour
     private GridObjectConfig config;
     public GridObjectConfig Config { get { return config; } }
 
-    private PropertyDict properties;
+    public PropertyDict Properties;
 
     public void Initialize(GridObjectConfig gridObjectConfig, Vector2 position, PropertyDict objectProperties)
     {
-        properties = objectProperties;
+        Properties = objectProperties;
         config = gridObjectConfig;
         transform.position = position;
         Player player = GetComponent<Player>();
@@ -31,7 +31,7 @@ public class GridObject : MonoBehaviour
     }
 
     public string GetStringProperty(string propertyName) {
-        return Tools.GetProperty(properties, propertyName);
+        return Tools.GetProperty(Properties, propertyName);
     }
 
     public int GetIntProperty(string propertyName) {

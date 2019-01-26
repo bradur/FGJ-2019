@@ -71,7 +71,12 @@ public class UIDialogueBox : MonoBehaviour
             string message = animatedMessages[0];
             AnimateMessage(message);
             animatedMessages.Remove(message);
-        } else if (!GameManager.main.PlayerIsDead) {
+        } else if (GameManager.main.LevelFinished)
+        {
+            MainGame.main.LoadNextLevel();
+        }
+        else if (!GameManager.main.PlayerIsDead)
+        {
             Hide();
         }
     }

@@ -24,6 +24,9 @@ public class GameManager : MonoBehaviour
     private bool playerIsDead = false;
     public bool PlayerIsDead { get { return playerIsDead; } }
 
+    private bool levelFinished = false;
+    public bool LevelFinished { get { return levelFinished; } }
+
     void Awake()
     {
         main = this;
@@ -43,6 +46,11 @@ public class GameManager : MonoBehaviour
         playerIsDead = true;
     }
 
+    public void FinishLevel()
+    {
+        levelFinished = true;
+    }
+
     void Start()
     {
 
@@ -54,6 +62,7 @@ public class GameManager : MonoBehaviour
 
     public void Reset()
     {
+        levelFinished = false;
         uIManager.Hide();
     }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.2.1" orientation="orthogonal" renderorder="right-down" width="25" height="20" tilewidth="64" tileheight="64" infinite="0" nextlayerid="111" nextobjectid="13">
+<map version="1.2" tiledversion="1.2.1" orientation="orthogonal" renderorder="right-down" width="25" height="20" tilewidth="64" tileheight="64" infinite="0" nextlayerid="111" nextobjectid="14">
  <properties>
   <property name="text0" value="Juttu 0"/>
   <property name="text1" value="Juttu 1"/>
@@ -85,6 +85,12 @@
     <property name="aggroRange" type="int" value="6"/>
     <property name="leashId" type="int" value="1"/>
     <property name="leashRange" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="13" type="Window" gid="255" x="1280" y="192" width="64" height="64">
+   <properties>
+    <property name="text0" value="You see butt."/>
+    <property name="text1" value="Good job ..."/>
    </properties>
   </object>
  </objectgroup>

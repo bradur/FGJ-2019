@@ -96,5 +96,12 @@ public class Player : MonoBehaviour {
         {
             lever.Activate();
         }
+
+        Window window = other.GetComponent<Window>();
+        if (window != null)
+        {
+            GameManager.main.FinishLevel();
+            UIManager.main.ShowMessages(window.texts);
+        }
     }
 }
