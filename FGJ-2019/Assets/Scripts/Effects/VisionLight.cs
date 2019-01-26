@@ -50,8 +50,30 @@ public class VisionLight : MonoBehaviour {
     private List<Transform> visibleTargets = new List<Transform>();
     public List<Transform> VisibleTargets { get { return visibleTargets; } }
 
-    public void Start()
-    {
+    private static string PROPERTY_RADIUS = "radius";
+    private static string PROPERTY_ANGLE = "angle";
+    private static string PROPERTY_ROTATION = "rotation";
+
+    private GridObject gridObject;
+
+    private bool started = false;
+
+    public void Init() {
+        gridObject = GetComponent<GridObject>();
+        float radiusFromMap = gridObject.GetFloatProperty(PROPERTY_RADIUS);
+        if (radiusFromMap > -1) {
+            radius = radiusFromMap;
+        }
+        float angleFromMap = gridObject.GetFloatProperty(PROPERTY_ANGLE);
+        if (angleFromMap > -1) {
+            viewAngle = angleFromMap;
+        }
+        float rotationFromMap = gridObject.GetFloatProperty(PROPERTY_ROTATION);
+        if (angleFromMap > -1) {
+            Vector3 currentRotation = transform.localEulerAngles;
+            currentRotation.y = rotationFromMap;
+            transform.localEulerAngles = currentRotation;
+        }
         viewRadius = radius;
         //transform.localPosition = new Vector3(x, y, 0);
         StartCoroutine("FindTargetsWithDelay", targetFindInterval);
@@ -61,6 +83,10 @@ public class VisionLight : MonoBehaviour {
         };
         viewMeshFilter.mesh = viewMesh;
         viewMeshCollider = viewMeshFilter.GetComponent<MeshCollider>();
+        started = true;
+        Vector3 newPosition = transform.position;
+        newPosition.z = -0.2f;
+        transform.position = newPosition;
     }
 
     void Kill()
@@ -74,7 +100,9 @@ public class VisionLight : MonoBehaviour {
     // Update is called once per frame
     void LateUpdate()
     {
-        DrawFieldOfView();
+        if (started) {
+            DrawFieldOfView();
+        }
     }
 
     void DrawFieldOfView()

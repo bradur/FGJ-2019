@@ -37,8 +37,8 @@ public class Dog : MonoBehaviour
         gridObject = GetComponent<GridObject>();
         playerPosition = GameManager.main.Config.PlayerPosition;
 
-        leashRange = gridObject.getFloatProperty(PROPERTY_LEASHRANGE);
-        aggroRange = gridObject.getFloatProperty(PROPERTY_AGGRORANGE);
+        leashRange = gridObject.GetFloatProperty(PROPERTY_LEASHRANGE);
+        aggroRange = gridObject.GetFloatProperty(PROPERTY_AGGRORANGE);
         print(leashRange);
         int leashId = gridObject.GetIntProperty(PROPERTY_LEASHID);
         if (leashId > -1)
