@@ -143,4 +143,17 @@ public class TiledMapTilesetManager : MonoBehaviour {
         return null;
     }
 
+    public int GetTileIdFromGID(int gid)
+    {
+        int tileId = 0;
+        int index = FindTileSetIndex(gid);
+        if (index != -1)
+        {
+            int tilesetFirstGid = firstGids[index];
+            tileId = gid - tilesetFirstGid;
+        }
+
+        return tileId;
+    }
+
 }

@@ -86,4 +86,13 @@ public class Player : MonoBehaviour {
             GameManager.main.PlayerDied("Dog ate you!");
         }
     }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        Lever lever = other.GetComponent<Lever>();
+        if (lever != null)
+        {
+            lever.Activate();
+        }
+    }
 }

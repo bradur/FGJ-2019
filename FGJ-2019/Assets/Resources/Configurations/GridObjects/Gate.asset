@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6151cd796efeb094bae0407c4c9ea5fe, type: 3}
+  m_Name: Gate
+  m_EditorClassIdentifier: 
+  objectName: Gate
+  prefab: {fileID: 114068418948790332, guid: bb176e5f579bf6b4d858e85dd98469df, type: 2}

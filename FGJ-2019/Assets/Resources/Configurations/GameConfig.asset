@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9efcec6a44d5f2247a69bdf4fd349e7f, type: 3}
   m_Name: GameConfig
   m_EditorClassIdentifier: 
-  firstLevel: {fileID: 4900000, guid: 1b680db822bee9b47a49694c01a312e6, type: 3}
+  firstLevel: {fileID: 4900000, guid: b2522c6c01440cd49b46dfe02f01d217, type: 3}
   playerPosition: {fileID: 11400000, guid: b457a949edd90aa489d4ac4188edf191, type: 2}
   gridTilePrefab: {fileID: 114182515756426414, guid: 8e2fca2b9a26c0c479b3c65bec18bb85,
     type: 2}
@@ -26,3 +26,22 @@ MonoBehaviour:
   uiForegroundColor: {r: 1, g: 1, b: 1, a: 1}
   uiTextAnimationSpeed: 15.3
   dialogueSkipKey: 32
+  colliderConfigs:
+  - {fileID: 11400000, guid: eae188c8c88005441a547184f4f05da8, type: 2}
+  - {fileID: 11400000, guid: 74e723dee23582c47b2a5163440eac24, type: 2}
+  - {fileID: 11400000, guid: 02f3aa504fbd81c4a9ebb815a39a2de2, type: 2}
+  - {fileID: 11400000, guid: 1344cdca679cacd4cb328727ab47d83a, type: 2}
+  - {fileID: 11400000, guid: 0aa60623814a9924fb34677e783728a8, type: 2}
+  - {fileID: 11400000, guid: 226cada571c988f4789b572f83d4527c, type: 2}
+  - {fileID: 11400000, guid: f4d1d9e732bb1a6469c01007e4480d35, type: 2}
+  - {fileID: 11400000, guid: d5690ea46d57dbf4f8658353b217855f, type: 2}
+  - {fileID: 11400000, guid: 9793f58c394133945815b7214dcb2b96, type: 2}
+  - {fileID: 11400000, guid: c892028e7a623cd4092fac4ce8a143dd, type: 2}
+  - {fileID: 11400000, guid: cae6b85c50f076c44a72032da1761964, type: 2}
+  - {fileID: 11400000, guid: 57b8ad43da3517746a6509c14ea5233a, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

@@ -53,4 +53,8 @@ public class GameConfig : ScriptableObject
     [SerializeField]
     private KeyCode dialogueSkipKey;
     public KeyCode DialogueSkipKey { get { return dialogueSkipKey; } }
+    [Header("Other configs")]
+    [SerializeField]
+    private List<ColliderConfig> colliderConfigs;
+    public List<ColliderConfig> ColliderConfigs { get { return colliderConfigs; } }
 }
