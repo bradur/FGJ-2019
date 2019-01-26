@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
         //Debug.Log(string.Format("Player died: {0}", reason));
         Time.timeScale = 0f;
         uIManager.ShowMessage(string.Format("{0}\n{1}", reason, "Press R to restart level."));
+        SoundManager.main.PlaySound(SoundType.PlayerDie);
         playerIsDead = true;
     }
 

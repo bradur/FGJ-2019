@@ -37,13 +37,15 @@ public class GridTile : MonoBehaviour
             {
                 BoxCollider col = gameObject.AddComponent<BoxCollider>();
                 col.center = new Vector3(param.centerX, param.centerY);
-                col.size = new Vector3(param.width, param.height);
+                col.size = new Vector3(param.width, param.height, 2f);
             }
+            gameObject.layer = LayerMask.NameToLayer("Wall");
             spriteRenderer.sortingOrder = y * 10 - 10;
         }
         else if(layerName == "ground")
         {
-            spriteRenderer.sortingOrder = y * 10 - 10;
+            spriteRenderer.sortingOrder = -2000;
+
         }
         else
         {
