@@ -48,19 +48,12 @@ public class GameManager : MonoBehaviour
 
     }
 
-    private void RestartLevel()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
     void Update()
     {
-        if (playerIsDead)
-        {
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                RestartLevel();
-            }
-        }
+    }
+
+    public void Reset()
+    {
+        uIManager.Hide();
     }
 }

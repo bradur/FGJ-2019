@@ -60,6 +60,7 @@ public class MainGame : MonoBehaviour {
         TextAsset newLevel = GameManager.main.Config.Levels[level];
         GridObjectManager.main.Reset();
         GridTileLayerManager.main.Reset();
+        GameManager.main.Reset();
         currentLevel = new GameObject("Level " + level);
         tiledMap.LoadLevel(newLevel.text, currentLevel);
     }

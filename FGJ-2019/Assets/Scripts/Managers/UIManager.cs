@@ -14,4 +14,9 @@ public class UIManager : MonoBehaviour {
         uIDialogueBox.AnimateMessage(message);
     }
 
+    public void Hide()
+    {
+        uIDialogueBox.Hide();
+    }
+
 }
