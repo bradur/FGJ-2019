@@ -8,8 +8,8 @@ using System.Collections.Generic;
 public class GameConfig : ScriptableObject
 {
     [SerializeField]
-    private TextAsset firstLevel;
-    public TextAsset FirstLevel { get { return firstLevel; } }
+    private List<TextAsset> levels;
+    public List<TextAsset> Levels { get { return levels; } }
 
     [Header("Tracked Positions")]
     [SerializeField]

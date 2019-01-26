@@ -11,7 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9efcec6a44d5f2247a69bdf4fd349e7f, type: 3}
   m_Name: GameConfig
   m_EditorClassIdentifier: 
-  firstLevel: {fileID: 4900000, guid: b2522c6c01440cd49b46dfe02f01d217, type: 3}
+  levels:
+  - {fileID: 4900000, guid: b2522c6c01440cd49b46dfe02f01d217, type: 3}
+  - {fileID: 4900000, guid: b2522c6c01440cd49b46dfe02f01d217, type: 3}
   playerPosition: {fileID: 11400000, guid: b457a949edd90aa489d4ac4188edf191, type: 2}
   gridTilePrefab: {fileID: 114182515756426414, guid: 8e2fca2b9a26c0c479b3c65bec18bb85,
     type: 2}

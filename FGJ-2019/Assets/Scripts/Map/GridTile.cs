@@ -16,7 +16,7 @@ public class GridTile : MonoBehaviour
     public int X { get { return x; } }
     public int Y { get { return y; } }
 
-    public void Initialize(Sprite sprite, int x, int y, GridLayerConfig gridLayerConfig)
+    public void Initialize(Sprite sprite, int x, int y, GridLayerConfig gridLayerConfig, int layerNumber)
     {
         this.x = x;
         this.y = y;
@@ -24,6 +24,7 @@ public class GridTile : MonoBehaviour
         if (spriteRenderer != null)
         {
             spriteRenderer.sprite = sprite;
+            spriteRenderer.sortingOrder = layerNumber;
             if (gridLayerConfig != null && gridLayerConfig.OverrideMaterial != null)
             {
                 spriteRenderer.material = gridLayerConfig.OverrideMaterial;
