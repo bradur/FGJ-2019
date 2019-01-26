@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.1" orientation="orthogonal" renderorder="right-down" width="15" height="15" tilewidth="64" tileheight="64" infinite="0" nextlayerid="6" nextobjectid="1">
+ <tileset firstgid="1" source="../TileSets/baseTileset.xml"/>
+ <layer id="1" name="regions" width="15" height="15">
+  <data encoding="base64" compression="zlib">
+   eJz7wMDA8IEBAj6gsfHR6Gxi9KCrpwSQaya6H6npplEw8IAeaY/a9gIAjRcaQQ==
+  </data>
+ </layer>
+ <layer id="2" name="input_obstacles" width="15" height="15">
+  <data encoding="base64" compression="zlib">
+   eJwTZGBgEGSAAEEkNjEAXS2MrwillaC0MpRWIcFsYu0mxb0w9eT6dxQMfgBLc7C0pgqlnWhsLyzNw9K6GpR2IUIvAKskArI=
+  </data>
+ </layer>
+ <layer id="3" name="output_obstacles" width="15" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxTZmBgUGKAABCtwkA8UCTApyVQRKOJBSA/qkHZqgwIv4+CUTBQAADiVAGf
+  </data>
+ </layer>
+ <layer id="4" name="output_nonblocking" width="15" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYMAOBKG0EJQWhtIiONSPglEwCsgDAP0cAEs=
+  </data>
+ </layer>
+ <layer id="5" name="output_collision" width="15" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2D4gP8E6MFoLwBgUQf5
+  </data>
+ </layer>
+</map>
