@@ -5,6 +5,259 @@ TextureImporter:
     21300000: characters_0
     21300002: characters_1
     21300004: characters_2
+    21300006: characters_3
+    21300008: characters_4
+    21300010: characters_5
+    21300012: characters_6
+    21300014: characters_7
+    21300016: characters_8
+    21300018: characters_9
+    21300020: characters_10
+    21300022: characters_11
+    21300024: characters_12
+    21300026: characters_13
+    21300028: characters_14
+    21300030: characters_15
+    21300032: characters_16
+    21300034: characters_17
+    21300036: characters_18
+    21300038: characters_19
+    21300040: characters_20
+    21300042: characters_21
+    21300044: characters_22
+    21300046: characters_23
+    21300048: characters_24
+    21300050: characters_25
+    21300052: characters_26
+    21300054: characters_27
+    21300056: characters_28
+    21300058: characters_29
+    21300060: characters_30
+    21300062: characters_31
+    21300064: characters_32
+    21300066: characters_33
+    21300068: characters_34
+    21300070: characters_35
+    21300072: characters_36
+    21300074: characters_37
+    21300076: characters_38
+    21300078: characters_39
+    21300080: characters_40
+    21300082: characters_41
+    21300084: characters_42
+    21300086: characters_43
+    21300088: characters_44
+    21300090: characters_45
+    21300092: characters_46
+    21300094: characters_47
+    21300096: characters_48
+    21300098: characters_49
+    21300100: characters_50
+    21300102: characters_51
+    21300104: characters_52
+    21300106: characters_53
+    21300108: characters_54
+    21300110: characters_55
+    21300112: characters_56
+    21300114: characters_57
+    21300116: characters_58
+    21300118: characters_59
+    21300120: characters_60
+    21300122: characters_61
+    21300124: characters_62
+    21300126: characters_63
+    21300128: characters_64
+    21300130: characters_65
+    21300132: characters_66
+    21300134: characters_67
+    21300136: characters_68
+    21300138: characters_69
+    21300140: characters_70
+    21300142: characters_71
+    21300144: characters_72
+    21300146: characters_73
+    21300148: characters_74
+    21300150: characters_75
+    21300152: characters_76
+    21300154: characters_77
+    21300156: characters_78
+    21300158: characters_79
+    21300160: characters_80
+    21300162: characters_81
+    21300164: characters_82
+    21300166: characters_83
+    21300168: characters_84
+    21300170: characters_85
+    21300172: characters_86
+    21300174: characters_87
+    21300176: characters_88
+    21300178: characters_89
+    21300180: characters_90
+    21300182: characters_91
+    21300184: characters_92
+    21300186: characters_93
+    21300188: characters_94
+    21300190: characters_95
+    21300192: characters_96
+    21300194: characters_97
+    21300196: characters_98
+    21300198: characters_99
+    21300200: characters_100
+    21300202: characters_101
+    21300204: characters_102
+    21300206: characters_103
+    21300208: characters_104
+    21300210: characters_105
+    21300212: characters_106
+    21300214: characters_107
+    21300216: characters_108
+    21300218: characters_109
+    21300220: characters_110
+    21300222: characters_111
+    21300224: characters_112
+    21300226: characters_113
+    21300228: characters_114
+    21300230: characters_115
+    21300232: characters_116
+    21300234: characters_117
+    21300236: characters_118
+    21300238: characters_119
+    21300240: characters_120
+    21300242: characters_121
+    21300244: characters_122
+    21300246: characters_123
+    21300248: characters_124
+    21300250: characters_125
+    21300252: characters_126
+    21300254: characters_127
+    21300256: characters_128
+    21300258: characters_129
+    21300260: characters_130
+    21300262: characters_131
+    21300264: characters_132
+    21300266: characters_133
+    21300268: characters_134
+    21300270: characters_135
+    21300272: characters_136
+    21300274: characters_137
+    21300276: characters_138
+    21300278: characters_139
+    21300280: characters_140
+    21300282: characters_141
+    21300284: characters_142
+    21300286: characters_143
+    21300288: characters_144
+    21300290: characters_145
+    21300292: characters_146
+    21300294: characters_147
+    21300296: characters_148
+    21300298: characters_149
+    21300300: characters_150
+    21300302: characters_151
+    21300304: characters_152
+    21300306: characters_153
+    21300308: characters_154
+    21300310: characters_155
+    21300312: characters_156
+    21300314: characters_157
+    21300316: characters_158
+    21300318: characters_159
+    21300320: characters_160
+    21300322: characters_161
+    21300324: characters_162
+    21300326: characters_163
+    21300328: characters_164
+    21300330: characters_165
+    21300332: characters_166
+    21300334: characters_167
+    21300336: characters_168
+    21300338: characters_169
+    21300340: characters_170
+    21300342: characters_171
+    21300344: characters_172
+    21300346: characters_173
+    21300348: characters_174
+    21300350: characters_175
+    21300352: characters_176
+    21300354: characters_177
+    21300356: characters_178
+    21300358: characters_179
+    21300360: characters_180
+    21300362: characters_181
+    21300364: characters_182
+    21300366: characters_183
+    21300368: characters_184
+    21300370: characters_185
+    21300372: characters_186
+    21300374: characters_187
+    21300376: characters_188
+    21300378: characters_189
+    21300380: characters_190
+    21300382: characters_191
+    21300384: characters_192
+    21300386: characters_193
+    21300388: characters_194
+    21300390: characters_195
+    21300392: characters_196
+    21300394: characters_197
+    21300396: characters_198
+    21300398: characters_199
+    21300400: characters_200
+    21300402: characters_201
+    21300404: characters_202
+    21300406: characters_203
+    21300408: characters_204
+    21300410: characters_205
+    21300412: characters_206
+    21300414: characters_207
+    21300416: characters_208
+    21300418: characters_209
+    21300420: characters_210
+    21300422: characters_211
+    21300424: characters_212
+    21300426: characters_213
+    21300428: characters_214
+    21300430: characters_215
+    21300432: characters_216
+    21300434: characters_217
+    21300436: characters_218
+    21300438: characters_219
+    21300440: characters_220
+    21300442: characters_221
+    21300444: characters_222
+    21300446: characters_223
+    21300448: characters_224
+    21300450: characters_225
+    21300452: characters_226
+    21300454: characters_227
+    21300456: characters_228
+    21300458: characters_229
+    21300460: characters_230
+    21300462: characters_231
+    21300464: characters_232
+    21300466: characters_233
+    21300468: characters_234
+    21300470: characters_235
+    21300472: characters_236
+    21300474: characters_237
+    21300476: characters_238
+    21300478: characters_239
+    21300480: characters_240
+    21300482: characters_241
+    21300484: characters_242
+    21300486: characters_243
+    21300488: characters_244
+    21300490: characters_245
+    21300492: characters_246
+    21300494: characters_247
+    21300496: characters_248
+    21300498: characters_249
+    21300500: characters_250
+    21300502: characters_251
+    21300504: characters_252
+    21300506: characters_253
+    21300508: characters_254
+    21300510: characters_255
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -134,7 +387,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 981ff7e57f044d04db6eda684bb8a077
+      spriteID: 8a6ad9421bb52214db0e84bd7c4e15e6
       vertices: []
       indices: 
       edges: []
@@ -154,7 +407,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fec658061a98074439327a919127dd5a
+      spriteID: 53f47fa24df51194ab6ea163c81675ff
       vertices: []
       indices: 
       edges: []
@@ -174,7 +427,67 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9e2dad7a3c93e84dbf1f07675ee5542
+      spriteID: 34fd16b5cc8cdfb47a727d942c8e2f8e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: characters_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1140
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edf38c2629d76024b95c7dd014f04552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: characters_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1140
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38c1167bc4fc27149a68d57cb2441d6e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: characters_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1140
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c0e4cb5c4716cb4ea4ca2bb78795cee
       vertices: []
       indices: 
       edges: []
