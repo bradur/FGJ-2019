@@ -28,7 +28,9 @@ public class GridTile : MonoBehaviour
             {
                 spriteRenderer.material = gridLayerConfig.OverrideMaterial;
             }
-        }        if (layerName == "obstacles")
+        }
+
+        if (layerName == "obstacles")
         {
             foreach (ColliderParams param in colliderConfig.Colliders)
             {
@@ -36,9 +38,19 @@ public class GridTile : MonoBehaviour
                 col.center = new Vector3(param.centerX, param.centerY);
                 col.size = new Vector3(param.width, param.height);
             }
+            spriteRenderer.sortingOrder = y * 10 - 10;
+        }
+        else if(layerName == "ground")
+        {
+            spriteRenderer.sortingOrder = y * 10 - 10;
+        }
+        else
+        {
+            spriteRenderer.sortingOrder = y * 9;
         }
 
         transform.position = new Vector2(x, y);
+
     }
 
 }

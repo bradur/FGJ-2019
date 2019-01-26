@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -60,6 +61,7 @@ public class Player : MonoBehaviour {
         }
 
         updatePlayerPosition();
+        spriteRenderer.sortingOrder = (int)Math.Floor(transform.position.y * 10);
 
         if(Input.GetKeyDown(KeyCode.Space)) {
             string property = "activationId";
