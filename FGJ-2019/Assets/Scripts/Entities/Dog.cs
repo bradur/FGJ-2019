@@ -21,6 +21,7 @@ public class Dog : MonoBehaviour
 
     string PROPERTY_LEASHID = "leashId";
     string PROPERTY_LEASHRANGE = "leashRange";
+    string PROPERTY_AGGRORANGE = "aggroRange";
 
     // Use this for initialization
     void Start ()
@@ -37,6 +38,7 @@ public class Dog : MonoBehaviour
         playerPosition = GameManager.main.Config.PlayerPosition;
 
         leashRange = gridObject.getFloatProperty(PROPERTY_LEASHRANGE);
+        aggroRange = gridObject.getFloatProperty(PROPERTY_AGGRORANGE);
         print(leashRange);
         int leashId = gridObject.GetIntProperty(PROPERTY_LEASHID);
         if (leashId > -1)

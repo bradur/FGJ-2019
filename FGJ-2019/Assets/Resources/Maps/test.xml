@@ -28,8 +28,9 @@
  <objectgroup id="2" name="Object Layer 1">
   <object id="2" type="Dog" gid="3" x="1216" y="448" width="64" height="64">
    <properties>
+    <property name="aggroRange" type="float" value="5"/>
     <property name="leashId" type="int" value="1"/>
-    <property name="leashRange" type="float" value="5"/>
+    <property name="leashRange" type="float" value="2"/>
    </properties>
   </object>
   <object id="3" type="Test" gid="20" x="1088" y="64" width="64" height="64">
