@@ -13,10 +13,12 @@ public class Player : MonoBehaviour {
     Vector2 desiredMoveDirection;
 
 	// Use this for initialization
+    GridObject gridObject;
 	void Start () {
         rigidbody = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
         renderer = gameObject.GetComponent<SpriteRenderer>();
+        gridObject = GetComponent<GridObject>();
 	}
 	
 	// Update is called once per frame
@@ -50,6 +52,9 @@ public class Player : MonoBehaviour {
         if (horizontal_velocity < -0.001f)
         {
             renderer.flipX = true;
+        }
+        if(Input.GetKeyDown(KeyCode.Space)) {
+            Debug.Log(gridObject.GetIntProperty("activateId"));
         }
     }
 

@@ -116,7 +116,7 @@ public class TiledMap : MonoBehaviour
                 y / tileSetSize.y + 1 // unity position starts at bottom
             );
 
-            newObject.Initialize(objectConfig, objectPosition);
+            newObject.Initialize(objectConfig, objectPosition, tmxObject.Properties);
         }
     }
 
