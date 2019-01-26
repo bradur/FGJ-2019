@@ -9,9 +9,9 @@ public class Player : MonoBehaviour {
     Rigidbody2D rigidbody;
     Animator anim;
     SpriteRenderer renderer;
-    
-    Vector2 desiredMoveDirection;
+    GridObject gridObject;
 
+    Vector2 desiredMoveDirection;
     TrackedPosition playerPosition;
 
     // Use this for initialization
@@ -20,6 +20,7 @@ public class Player : MonoBehaviour {
         rigidbody = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
         renderer = gameObject.GetComponent<SpriteRenderer>();
+        gridObject = GetComponent<GridObject>();
 
         playerPosition = GameManager.main.Config.PlayerPosition;
         updatePlayerPosition();
@@ -59,6 +60,11 @@ public class Player : MonoBehaviour {
         }
 
         updatePlayerPosition();
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log(gridObject.GetIntProperty("activateId"));
+        }
     }
 
     private void updatePlayerPosition()

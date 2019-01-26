@@ -4,19 +4,32 @@
 
 using UnityEngine;
 using System.Collections;
+using TiledSharp;
 
 public class GridObject : MonoBehaviour
 {
 
     private GridObjectConfig config;
     public GridObjectConfig Config { get { return config; } }
-    public void Initialize(GridObjectConfig gridObjectConfig, Vector2 position)
+
+    private PropertyDict properties;
+
+    public void Initialize(GridObjectConfig gridObjectConfig, Vector2 position, PropertyDict objectProperties)
     {
+        properties = objectProperties;
         config = gridObjectConfig;
         transform.position = position;
         Player player = GetComponent<Player>();
         if (player != null) {
             GameManager.main.SetupPlayer(player);
         }
+    }
+
+    public string GetStringProperty(string propertyName) {
+        return Tools.GetProperty(properties, propertyName);
+    }
+
+    public int GetIntProperty(string propertyName) {
+        return Tools.IntParseFast(Tools.GetProperty(properties, propertyName));
     }
 }
