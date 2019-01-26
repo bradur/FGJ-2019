@@ -35,11 +35,11 @@ public class GridObject : MonoBehaviour
     }
 
     public int GetIntProperty(string propertyName) {
-        return Tools.IntParseFast(Tools.GetProperty(properties, propertyName));
+        return Tools.IntParseFast(GetStringProperty(propertyName));
     }
 
     public float getFloatProperty(string propertyName)
     {
-        return 0.0f;
+        return Tools.FloatParse(GetStringProperty(propertyName));
     }
 }

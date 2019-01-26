@@ -6,9 +6,9 @@ public class Dog : MonoBehaviour
 {
     public float moveSpeed = 10;
     public float aggroRange = 10;
-    public float leashRange;
     
     public Vector2 leashOrigin;
+    float leashRange;
     TrackedPosition playerPosition;
 
     Rigidbody rigidbody;
@@ -20,6 +20,7 @@ public class Dog : MonoBehaviour
     bool leashed = false;
 
     string PROPERTY_LEASHID = "leashId";
+    string PROPERTY_LEASHRANGE = "leashRange";
 
     // Use this for initialization
     void Start ()
@@ -35,6 +36,8 @@ public class Dog : MonoBehaviour
         gridObject = GetComponent<GridObject>();
         playerPosition = GameManager.main.Config.PlayerPosition;
 
+        leashRange = gridObject.getFloatProperty(PROPERTY_LEASHRANGE);
+        print(leashRange);
         int leashId = gridObject.GetIntProperty(PROPERTY_LEASHID);
         if (leashId > -1)
         {
