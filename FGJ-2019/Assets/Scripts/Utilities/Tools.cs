@@ -25,9 +25,23 @@ public class Tools : MonoBehaviour
         return result;
     }
 
+    public static float FloatParse(string value)
+    {
+        float result = 0;
+        try
+        {
+            result = float.Parse(value);
+        }
+        catch (System.NullReferenceException)
+        {
+            result = -1;
+        }
+        return result;
+    }
+
     public static string GetProperty(PropertyDict properties, string property)
     {
-        if (properties.ContainsKey(property))
+        if (properties != null && properties.ContainsKey(property))
         {
             return properties[property];
         }

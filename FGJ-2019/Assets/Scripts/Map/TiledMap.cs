@@ -41,6 +41,7 @@ public class TiledMap : MonoBehaviour
         tiledMapTilesetManager.Initialize(map);
         DrawLayers(map);
         SpawnObjects(map);
+        GridObjectManager.main.MapLoaded();
     }
 
     private void DrawLayers(TmxMap map)
@@ -49,24 +50,35 @@ public class TiledMap : MonoBehaviour
         
         foreach (TmxLayer layer in map.Layers)
         {
-            GridLayerConfig gridLayerConfig = GetGridLayerConfig(Tools.GetProperty(layer.Properties, "Type"));
-            Transform container = GetContainer(layer.Name);
+            GridLayerConfig gridLayerConfig = GetGridLayerConfig(layer.Name);
+
             foreach (TmxLayerTile tile in layer.Tiles)
             {
                 if (tile.Gid != 0)
                 {
-                    SpawnTile(tile, tile.X, -tile.Y, layer, gridLayerConfig, container);
+                    SpawnTile(tile, tile.X, -tile.Y, layer, gridLayerConfig);
                 }
             }
         }
     }
 
-    private void SpawnTile(TmxLayerTile tile, int x, int y, TmxLayer layer, GridLayerConfig gridLayerConfig, Transform container)
+    private void SpawnTile(TmxLayerTile tile, int x, int y, TmxLayer layer, GridLayerConfig gridLayerConfig)
     {
+        Transform container = GetContainer("TileLayers");
+        GridTile spawnedTile = null;
+        if (gridLayerConfig != null) {
+            if (gridLayerConfig.OverridePrefab) {
+                spawnedTile = Instantiate(gridLayerConfig.OverridePrefab);
+            } else
+            {
+                spawnedTile = Instantiate(config.GridTilePrefab);
+            }
+        } else {
+            spawnedTile = Instantiate(config.GridTilePrefab);
+        }
         Sprite sprite = GetTileSprite(tile.Gid);
-        GridTile spawnedTile = Instantiate(config.GridTilePrefab);
-        spawnedTile.Initialize(sprite, x, y);
-        spawnedTile.transform.SetParent(container);
+        spawnedTile.Initialize(sprite, x, y, gridLayerConfig);
+        GridTileLayerManager.main.AddTile(spawnedTile, layer.Name, container);
     }
 
     private Sprite GetTileSprite(int tileGid)
@@ -108,6 +120,11 @@ public class TiledMap : MonoBehaviour
         {
             Sprite sprite = GetTileSprite(tmxObject.Tile.Gid);
             GridObjectConfig objectConfig = GetObjectConfigByName(tmxObject.Type);
+            if (objectConfig == null || objectConfig.Prefab == null)
+            {
+                Debug.Log(string.Format("No object config found or no prefab set for {0}", tmxObject.Type));
+                return;
+            }
             GridObject newObject = Instantiate(objectConfig.Prefab, container);
 
             Vector2 tileSetSize = tiledMapTilesetManager.GetTileSetSize(tmxObject.Tile.Gid);

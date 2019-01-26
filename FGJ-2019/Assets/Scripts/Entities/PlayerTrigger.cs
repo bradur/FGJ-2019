@@ -16,12 +16,8 @@ public class PlayerTrigger : MonoBehaviour {
     }
 
     void OnTriggerEnter (Collider collider) {
-        Debug.Log("TRIGGER");
-        Debug.Log(collider.gameObject);
+        // detect LightVision hits here
+        Debug.Log("Entering light!");
     }
 
-    void OnCollisionEnter(Collision collision) {
-        Debug.Log("COLLISION");
-        Debug.Log(collision.gameObject);
-    }
 }

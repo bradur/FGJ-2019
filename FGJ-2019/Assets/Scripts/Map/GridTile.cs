@@ -6,12 +6,29 @@ using UnityEngine;
 using System.Collections;
 using TiledSharp;
 
-public class GridTile : MonoBehaviour {
+public class GridTile : MonoBehaviour
+{
 
     private SpriteRenderer spriteRenderer;
-    public void Initialize(Sprite sprite, int x, int y) {
+
+    private int x;
+    private int y;
+    public int X { get { return x; } }
+    public int Y { get { return y; } }
+
+    public void Initialize(Sprite sprite, int x, int y, GridLayerConfig gridLayerConfig)
+    {
+        this.x = x;
+        this.y = y;
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-        spriteRenderer.sprite = sprite;
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.sprite = sprite;
+            if (gridLayerConfig != null && gridLayerConfig.OverrideMaterial != null)
+            {
+                spriteRenderer.material = gridLayerConfig.OverrideMaterial;
+            }
+        }
         transform.position = new Vector2(x, y);
     }
 
