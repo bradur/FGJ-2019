@@ -42,4 +42,9 @@ public class GridObject : MonoBehaviour
     {
         return Tools.FloatParse(GetStringProperty(propertyName));
     }
+
+    public bool getBoolProperty(string propertyName)
+    {
+        return Tools.BoolParse(GetStringProperty(propertyName));
+    }
 }

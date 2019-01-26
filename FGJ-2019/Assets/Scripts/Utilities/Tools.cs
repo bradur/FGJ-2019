@@ -39,6 +39,11 @@ public class Tools : MonoBehaviour
         return result;
     }
 
+    public static bool BoolParse(string value)
+    {
+        return "true".Equals(value);
+    }
+
     public static string GetProperty(PropertyDict properties, string property)
     {
         if (properties != null && properties.ContainsKey(property))
