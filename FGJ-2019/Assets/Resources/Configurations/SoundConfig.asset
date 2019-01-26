@@ -14,8 +14,5 @@ MonoBehaviour:
   objectName: SoundConfig
   sounds:
   - soundType: 1
-    sound: {fileID: 8300000, guid: b6cd5482bece24f4899f5e84db7ba8c4, type: 3}
-    sounds: []
-  - soundType: 0
-    sound: {fileID: 0}
+    sound: {fileID: 8300000, guid: 4c1830e921739574d97ad9d70931b437, type: 3}
     sounds: []
