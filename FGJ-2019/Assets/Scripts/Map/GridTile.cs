@@ -5,10 +5,10 @@
 using UnityEngine;
 using System.Collections;
 using TiledSharp;
+using System.Collections.Generic;
 
 public class GridTile : MonoBehaviour
 {
-
     private SpriteRenderer spriteRenderer;
 
     private int x;
@@ -16,7 +16,7 @@ public class GridTile : MonoBehaviour
     public int X { get { return x; } }
     public int Y { get { return y; } }
 
-    public void Initialize(Sprite sprite, int x, int y, GridLayerConfig gridLayerConfig, int layerNumber)
+    public void Initialize(Sprite sprite, int x, int y, GridLayerConfig gridLayerConfig, ColliderConfig colliderConfig, string layerName, int layerNumber)
     {
         this.x = x;
         this.y = y;
@@ -29,7 +29,16 @@ public class GridTile : MonoBehaviour
             {
                 spriteRenderer.material = gridLayerConfig.OverrideMaterial;
             }
+        }        if (layerName == "obstacles")
+        {
+            foreach (ColliderParams param in colliderConfig.Colliders)
+            {
+                BoxCollider col = gameObject.AddComponent<BoxCollider>();
+                col.center = new Vector3(param.centerX, param.centerY);
+                col.size = new Vector3(param.width, param.height);
+            }
         }
+
         transform.position = new Vector2(x, y);
     }
 

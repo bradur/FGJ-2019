@@ -32,4 +32,29 @@ public class GameConfig : ScriptableObject
     [SerializeField]
     private GridTileLayer gridTileLayerPrefab;
     public GridTileLayer GridTileLayerPrefab { get { return gridTileLayerPrefab; } }
+
+    [Header("UI")]
+    [SerializeField]
+    private Color uiBackgroundColor;
+    public Color UIBackgroundColor { get { return uiBackgroundColor; } }
+    [SerializeField]
+    private Color uiBorderColor;
+    public Color UIBorderColor { get { return uiBorderColor; } }
+    [SerializeField]
+    private Color uiForegroundColor;
+    public Color UIForegroundColor { get { return uiForegroundColor; } }
+
+    [SerializeField]
+    [Tooltip("Amount of letters per second.")]
+    [Range(10f, 50f)]
+    private float uiTextAnimationSpeed = 1f;
+    public float UITextAnimationSpeed { get { return uiTextAnimationSpeed; } }
+
+    [SerializeField]
+    private KeyCode dialogueSkipKey;
+    public KeyCode DialogueSkipKey { get { return dialogueSkipKey; } }
+    [Header("Other configs")]
+    [SerializeField]
+    private List<ColliderConfig> colliderConfigs;
+    public List<ColliderConfig> ColliderConfigs { get { return colliderConfigs; } }
 }

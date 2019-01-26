@@ -75,18 +75,25 @@ public class TiledMap : MonoBehaviour
     {
         Transform container = GetContainer("TileLayers");
         GridTile spawnedTile = null;
-        if (gridLayerConfig != null) {
-            if (gridLayerConfig.OverridePrefab) {
+        if (gridLayerConfig != null)
+        {
+            if (gridLayerConfig.OverridePrefab)
+            {
                 spawnedTile = Instantiate(gridLayerConfig.OverridePrefab, scene.transform);
-            } else
+            }
+            else
             {
                 spawnedTile = Instantiate(config.GridTilePrefab, scene.transform);
             }
-        } else {
-            spawnedTile = Instantiate(config.GridTilePrefab, scene.transform);
+        }
+        else
+        {
+            spawnedTile = Instantiate(config.GridTilePrefab);
         }
         Sprite sprite = GetTileSprite(tile.Gid);
-        spawnedTile.Initialize(sprite, x, y, gridLayerConfig, layerNumber);
+
+        ColliderConfig conf = GetColliderConfig(tile.Gid);
+        spawnedTile.Initialize(sprite, x, y, gridLayerConfig, conf, layer.Name, layerNumber);
         GridTileLayerManager.main.AddTile(spawnedTile, layer.Name, container);
     }
 
@@ -94,9 +101,35 @@ public class TiledMap : MonoBehaviour
     {
         return tiledMapTilesetManager.GetSprite(tileGid);
     }
-    private GridLayerConfig GetGridLayerConfig(string name) {
-        foreach(GridLayerConfig gridLayerConfig in gridLayerConfigs) {
-            if (gridLayerConfig.Name == name) {
+
+    private ColliderConfig GetColliderConfig(int tileGid)
+    {
+        int id = tiledMapTilesetManager.GetTileIdFromGID(tileGid);
+        string name = "collider" + id;
+        ColliderConfig result = null;
+
+        foreach (ColliderConfig conf in GameManager.main.Config.ColliderConfigs)
+        {
+            if (conf != null && conf.name == name)
+            {
+                result = conf;
+            }
+        }
+
+        if (result == null)
+        {
+            result = ScriptableObject.CreateInstance<ColliderConfig>();
+        }
+
+        return result;
+    }
+
+    private GridLayerConfig GetGridLayerConfig(string name)
+    {
+        foreach (GridLayerConfig gridLayerConfig in gridLayerConfigs)
+        {
+            if (gridLayerConfig.Name == name)
+            {
                 return gridLayerConfig;
             }
         }
@@ -147,11 +180,14 @@ public class TiledMap : MonoBehaviour
         }
     }
 
-    private GridObjectConfig GetObjectConfigByName(string configName) {
+    private GridObjectConfig GetObjectConfigByName(string configName)
+    {
         GridObjectConfig gridObjectConfig = null;
 
-        foreach(GridObjectConfig config in gridObjectConfigs) {
-            if (config.Name == configName) {
+        foreach (GridObjectConfig config in gridObjectConfigs)
+        {
+            if (config.Name == configName)
+            {
                 return config;
             }
         }

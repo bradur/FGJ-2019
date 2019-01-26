@@ -23,3 +23,9 @@ MonoBehaviour:
     type: 2}
   gridTileLayerPrefab: {fileID: 114914391167225038, guid: 79eb00f776dbbc546b68533baf57ee92,
     type: 2}
+  uiBackgroundColor: {r: 0.28627452, g: 0.3019608, b: 0.49411765, a: 1}
+  uiBorderColor: {r: 0.15294118, g: 0.15294118, b: 0.26666668, a: 1}
+  uiForegroundColor: {r: 1, g: 1, b: 1, a: 1}
+  uiTextAnimationSpeed: 15.3
+  dialogueSkipKey: 32
+  colliderConfigs: []

@@ -8,7 +8,7 @@
  </layer>
  <layer id="2" name="obstacles" width="25" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjYCAdpBKJKQGJUJyCxE7CIkYuUAZiJTSsQoF52IAikWLUtoPagB7+UGWAxAEDAyI+1KhsB72BMJQWoaEdylCa2mmX3kAVSg/1OB8Fo2AgAQDXBAqi
+   eJxjYCAdpBKJKQGJUJyCxE7CIkYuUAZiJTSsQoF52IAikWLUtoPagB7+UGWAxIETAyI+1KhsxyigPxCE0kJQWhhKi0BpUSgtRjcXkQdg6V0JSitDaViZoQqlR9MsolxOgtIpUJrSOmEUEAYAVqsNAQ==
   </data>
  </layer>
  <objectgroup id="110" name="Object Layer 1">
@@ -85,12 +85,12 @@
  </objectgroup>
  <layer id="3" name="nonblocking" width="25" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjYBh8QBiIhdCwCA61gfRyFBlAcIDsoLa9ogyQOGBgQMSHGJXtGAWDF4hC6dE4HwWjYHADAFzzAYA=
+   eJxjYBh8QBiIhdCwCA61gfRyFBlAcIDsoLa9ogyQODBiQMSHGJXtGAWjYBSMglFAGQAA2ccBhw==
   </data>
  </layer>
  <layer id="4" name="collision" width="25" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUDFXwH40eqmC4+GMUjIKBBACaAgP9
+   eJxjYBgFo2AUjIJRMApGwVAHAAfQAAE=
   </data>
  </layer>
 </map>

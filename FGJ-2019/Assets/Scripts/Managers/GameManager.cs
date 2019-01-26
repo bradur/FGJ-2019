@@ -4,6 +4,7 @@
 
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,12 +18,29 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private CameraManager cameraManager;
 
-    void Awake() {
+    [SerializeField]
+    private UIManager uIManager;
+
+    private bool playerIsDead = false;
+    public bool PlayerIsDead { get { return playerIsDead; } }
+
+    void Awake()
+    {
         main = this;
     }
 
-    public void SetupPlayer(Player player) {
+    public void SetupPlayer(Player player)
+    {
+        Time.timeScale = 1f;
         cameraManager.FollowPlayer(player.transform);
+    }
+
+    public void PlayerDied(string reason)
+    {
+        //Debug.Log(string.Format("Player died: {0}", reason));
+        Time.timeScale = 0f;
+        uIManager.ShowMessage(string.Format("{0}\n{1}", reason, "Press R to restart level."));
+        playerIsDead = true;
     }
 
     void Start()
@@ -30,8 +48,19 @@ public class GameManager : MonoBehaviour
 
     }
 
+    private void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     void Update()
     {
-
+        if (playerIsDead)
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                RestartLevel();
+            }
+        }
     }
 }

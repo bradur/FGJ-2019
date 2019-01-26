@@ -81,8 +81,10 @@ public class Player : MonoBehaviour {
         
     }
 
-    public void OnCollisionEnter(Collision collision)
-    {
+    private void OnCollisionEnter(Collision collision) {
+        if (collision.gameObject.tag == "Dog") {
+            GameManager.main.PlayerDied("Dog ate you!");
+        }
     }
 
     public void OnTriggerEnter(Collider other)

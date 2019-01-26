@@ -41,7 +41,6 @@ public class TiledMapTilesetManager : MonoBehaviour {
                 ""
             );
             TextAsset textAsset = (TextAsset) Resources.Load(resourcePath);
-            Debug.Log(resourcePath);
             XDocument tilesetX = XDocument.Parse(textAsset.text);
             files.Add(tilesetX.Element("tileset"));
         }
@@ -142,6 +141,19 @@ public class TiledMapTilesetManager : MonoBehaviour {
             return tileSprites[tilesetFirstGid][tileGid - tilesetFirstGid];
         }
         return null;
+    }
+
+    public int GetTileIdFromGID(int gid)
+    {
+        int tileId = 0;
+        int index = FindTileSetIndex(gid);
+        if (index != -1)
+        {
+            int tilesetFirstGid = firstGids[index];
+            tileId = gid - tilesetFirstGid;
+        }
+
+        return tileId;
     }
 
 }

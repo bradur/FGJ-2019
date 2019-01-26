@@ -15,9 +15,12 @@ public class PlayerTrigger : MonoBehaviour {
     
     }
 
+    private bool wasHit = false;
+
     void OnTriggerEnter (Collider collider) {
         // detect LightVision hits here
-        Debug.Log("Entering light!");
+        Debug.Log(string.Format("{0} was hit by {1}", gameObject, collider.gameObject));
+        GameManager.main.PlayerDied("You were seen!");
     }
 
 }
