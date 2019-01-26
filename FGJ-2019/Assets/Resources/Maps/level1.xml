@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="25" height="20" tilewidth="64" tileheight="64">
+<map version="1.2" tiledversion="1.2.1" orientation="orthogonal" renderorder="right-down" width="25" height="20" tilewidth="64" tileheight="64" infinite="0" nextlayerid="110" nextobjectid="1">
  <tileset firstgid="1" source="../TileSets/baseTileset.xml"/>
- <layer name="Tile Layer 1" width="25" height="20">
+ <layer id="1" name="ground" width="25" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFgxkwAjETEDOjsdH5jHjUEmMHLr3EsEk1l9p24XM/tf1DrrtJ9c9QNHsg7BkFo2AUIAAAawsBKA==
+   eJyFlVuOxDAIBLHN/c88s9JGapWLzAdKbPFsGtxVdb6y/r9/skNWyAndDf0Wu9Q5cabPhfstwvu03+Hb8socGv+MmbYL+sSgw8euOx/677qxsfiGj9X7nJ84DT32kj1IPLKGt7hniMWYViPxMJsltsktq5825OkezsYB5rDrzpexum7sjPddXvP0bz2ymbNcbRZ23f2Z8GnRzRpsxt/4Qy5w7rfocgeYzxabrjsvxmE9OevGpxZ/00wZN4kB8TZ+se4nD9u1tht+3fFrGNvMTLuau4/4co8aV40T2Svi8/Z2MAa5Mr1N9MsdZnNPXKYdN+1l29vsX8sdfX4AZmgEMA==
   </data>
  </layer>
- <layer name="Tile Layer 2" width="25" height="20">
+ <layer id="2" name="obstacles" width="25" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFQw0IA7EQlA2iRWhghzIQK0HZIFqFBnYoEuAPFSDKgBofYjSwQ5UBNT7UaGDHKBgFo2BoAwD21wH3
+   eJxjYCAdpBKJKQGJUJyCxE7CIkYuUAZiJTSsQoF52IAikWLUtoPagB7+UGWAxIETAyI+1KhsxygYBaNgFAxnAABwMQor
   </data>
  </layer>
- <layer name="Tile Layer 3" width="25" height="20">
+ <layer id="3" name="nonblocking" width="25" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFQxUY0cEOJxqabUJDs2HABY3vTAc7aQkcB9oBo2AUjIJBCwBnEQFx
+   eJxjYBh8QBiIhdCwCA61gfRyFBlAcIDsoLa9ogyQODBiQMSHGJXtGAWjYBSMglFAGQAA2ccBhw==
   </data>
  </layer>
- <layer name="Tile Layer 4" width="25" height="20">
+ <layer id="4" name="collision" width="25" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2D4AkEC/FEwCkbBKBguAACuoAAj
+   eJxjYBgFo2AUjIJRMApGwVAHAAfQAAE=
   </data>
  </layer>
 </map>
