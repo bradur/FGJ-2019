@@ -80,4 +80,17 @@ public class Player : MonoBehaviour {
     {
         
     }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        Lever lever = other.GetComponent<Lever>();
+        if (lever != null)
+        {
+            lever.Activate();
+        }
+    }
 }
