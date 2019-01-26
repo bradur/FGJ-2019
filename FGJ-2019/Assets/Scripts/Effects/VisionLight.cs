@@ -69,7 +69,7 @@ public class VisionLight : MonoBehaviour {
             viewAngle = angleFromMap;
         }
         float rotationFromMap = gridObject.GetFloatProperty(PROPERTY_ROTATION);
-        if (angleFromMap > -1) {
+        if (rotationFromMap > -1) {
             Vector3 currentRotation = transform.localEulerAngles;
             currentRotation.y = rotationFromMap;
             transform.localEulerAngles = currentRotation;

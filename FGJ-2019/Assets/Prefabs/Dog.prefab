@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 135105665805463040}
   m_Layer: 0
   m_Name: Dog
-  m_TagString: Untagged
+  m_TagString: Dog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,7 +102,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   aggroRange: 5
-  leashRange: 5
   leashOrigin: {x: 0, y: 0}
 --- !u!135 &135105665805463040
 SphereCollider:

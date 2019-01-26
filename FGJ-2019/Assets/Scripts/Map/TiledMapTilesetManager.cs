@@ -41,7 +41,6 @@ public class TiledMapTilesetManager : MonoBehaviour {
                 ""
             );
             TextAsset textAsset = (TextAsset) Resources.Load(resourcePath);
-            Debug.Log(resourcePath);
             XDocument tilesetX = XDocument.Parse(textAsset.text);
             files.Add(tilesetX.Element("tileset"));
         }

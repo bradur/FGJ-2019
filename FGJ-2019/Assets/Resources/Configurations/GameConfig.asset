@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9efcec6a44d5f2247a69bdf4fd349e7f, type: 3}
   m_Name: GameConfig
   m_EditorClassIdentifier: 
-  firstLevel: {fileID: 4900000, guid: 01383d76e4c7d9c4185ada479753445c, type: 3}
+  firstLevel: {fileID: 4900000, guid: 1b680db822bee9b47a49694c01a312e6, type: 3}
   playerPosition: {fileID: 11400000, guid: b457a949edd90aa489d4ac4188edf191, type: 2}
   gridTilePrefab: {fileID: 114182515756426414, guid: 8e2fca2b9a26c0c479b3c65bec18bb85,
     type: 2}
@@ -21,3 +21,8 @@ MonoBehaviour:
     type: 2}
   gridTileLayerPrefab: {fileID: 114914391167225038, guid: 79eb00f776dbbc546b68533baf57ee92,
     type: 2}
+  uiBackgroundColor: {r: 0.28627452, g: 0.3019608, b: 0.49411765, a: 1}
+  uiBorderColor: {r: 0.15294118, g: 0.15294118, b: 0.26666668, a: 1}
+  uiForegroundColor: {r: 1, g: 1, b: 1, a: 1}
+  uiTextAnimationSpeed: 15.3
+  dialogueSkipKey: 32
