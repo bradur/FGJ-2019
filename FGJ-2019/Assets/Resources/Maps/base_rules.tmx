@@ -3,17 +3,17 @@
  <tileset firstgid="1" source="../TileSets/baseTileset.xml"/>
  <layer id="1" name="regions_input" width="15" height="15">
   <data encoding="base64" compression="zlib">
-   eJz7wMDA8IEBAj6gsfHR6Gxi9KCrpwSQaya6H6npJloBXH6lRbgOdUCPtEdtewFZgB4B
+   eJxjYBgFgx18QKNHAW6AHlb0CjtK7AUAql4JYQ==
   </data>
  </layer>
  <layer id="8" name="regions_output" width="15" height="15">
   <data encoding="base64" compression="zlib">
-   eJz7wMDA8IEBAj6gsfHR6Gxi9KCrpwSQaya6H6npJkL2ItOD1cyhDuiR9qhtLwDKAB4B
+   eJxjYBgF9AAf0OhRQBuAHs70CndK7AUAGu0JYQ==
   </data>
  </layer>
  <layer id="2" name="input_obstacles" width="15" height="15">
   <data encoding="base64" compression="zlib">
-   eJwTZGBgEGSAAEEkNjEAXS2MrwillaC0MpRWIcFsYu0mxb0w9eT6d6CAE5R2QRMPhNJBdHTLYAewNAdLa6pQ2gmLWmoCWJqHpXU1KI0eZ9gAAMQqA9s=
+   eJwTZGBgEGSAAEEkNjEAXS2MrwillaC0MpRWIcFsYu0mxb0w9eT6d6CAE5R2GVBXDA0AS3OwtKYKpZ2wqKUmgKV5WFpXg9LExBkApFMDOA==
   </data>
  </layer>
  <layer id="3" name="output_obstacles" width="15" height="15">
@@ -23,10 +23,10 @@
  </layer>
  <layer id="4" name="output_nonblocking" width="15" height="15">
   <data encoding="base64" compression="zlib">
-   eJxjYMAOBKG0EJQWhtIiONSPAvzACEqbUNHMQCgdREUzRwH9AQDyigFU
+   eJxjYMAOBKG0EJQWhtIiONSPAvzACEqbDKgrRsFgBADSswCx
   </data>
  </layer>
- <layer id="5" name="output_collision" width="15" height="15" visible="0">
+ <layer id="5" name="output_collision" width="15" height="15">
   <data encoding="base64" compression="zlib">
    eJxjYBgFo2D4gP8E6MFoLwBgUQf5
   </data>
