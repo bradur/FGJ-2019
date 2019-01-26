@@ -9,17 +9,22 @@ public class Player : MonoBehaviour {
     Rigidbody2D rigidbody;
     Animator anim;
     SpriteRenderer renderer;
-    
-    Vector2 desiredMoveDirection;
-
-	// Use this for initialization
     GridObject gridObject;
-	void Start () {
+
+    Vector2 desiredMoveDirection;
+    TrackedPosition playerPosition;
+
+    // Use this for initialization
+    void Start()
+    {
         rigidbody = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
         renderer = gameObject.GetComponent<SpriteRenderer>();
         gridObject = GetComponent<GridObject>();
-	}
+
+        playerPosition = GameManager.main.Config.PlayerPosition;
+        updatePlayerPosition();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -53,6 +58,9 @@ public class Player : MonoBehaviour {
         {
             renderer.flipX = true;
         }
+
+        updatePlayerPosition();
+
         if(Input.GetKeyDown(KeyCode.Space)) {
             string property = "activationId";
             Debug.Log(gridObject.GetIntProperty(property));
@@ -61,6 +69,11 @@ public class Player : MonoBehaviour {
                 Debug.Log(activateObject);
             }
         }
+    }
+
+    private void updatePlayerPosition()
+    {
+        playerPosition.Position = transform.position;
     }
 
     private void FixedUpdate()
