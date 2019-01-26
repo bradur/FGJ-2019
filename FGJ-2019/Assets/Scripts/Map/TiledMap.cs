@@ -41,6 +41,7 @@ public class TiledMap : MonoBehaviour
         tiledMapTilesetManager.Initialize(map);
         DrawLayers(map);
         SpawnObjects(map);
+        GridObjectManager.main.MapLoaded();
     }
 
     private void DrawLayers(TmxMap map)
@@ -68,6 +69,9 @@ public class TiledMap : MonoBehaviour
         if (gridLayerConfig != null) {
             if (gridLayerConfig.OverridePrefab) {
                 spawnedTile = Instantiate(gridLayerConfig.OverridePrefab);
+            } else
+            {
+                spawnedTile = Instantiate(config.GridTilePrefab);
             }
         } else {
             spawnedTile = Instantiate(config.GridTilePrefab);
@@ -116,6 +120,11 @@ public class TiledMap : MonoBehaviour
         {
             Sprite sprite = GetTileSprite(tmxObject.Tile.Gid);
             GridObjectConfig objectConfig = GetObjectConfigByName(tmxObject.Type);
+            if (objectConfig == null || objectConfig.Prefab == null)
+            {
+                Debug.Log(string.Format("No object config found or no prefab set for {0}", tmxObject.Type));
+                return;
+            }
             GridObject newObject = Instantiate(objectConfig.Prefab, container);
 
             Vector2 tileSetSize = tiledMapTilesetManager.GetTileSetSize(tmxObject.Tile.Gid);

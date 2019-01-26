@@ -22,6 +22,10 @@ public class GridTileLayerManager : MonoBehaviour {
     }
 
     private GridTileLayer AddLayer(string layerName, Transform container) {
+        if (config == null)
+        {
+            config = GameManager.main.Config;
+        }
         GridTileLayer layer = Instantiate(config.GridTileLayerPrefab);
         layer.Initialize(layerName, container);
         layers.Add(layer);

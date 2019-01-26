@@ -25,11 +25,21 @@ public class GridObject : MonoBehaviour
         }
     }
 
+    public void MapLoaded()
+    {
+        SendMessage("Init", SendMessageOptions.DontRequireReceiver);
+    }
+
     public string GetStringProperty(string propertyName) {
         return Tools.GetProperty(properties, propertyName);
     }
 
     public int GetIntProperty(string propertyName) {
         return Tools.IntParseFast(Tools.GetProperty(properties, propertyName));
+    }
+
+    public float getFloatProperty(string propertyName)
+    {
+        return 0.0f;
     }
 }

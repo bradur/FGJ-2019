@@ -27,7 +27,7 @@ public class Tools : MonoBehaviour
 
     public static string GetProperty(PropertyDict properties, string property)
     {
-        if (properties.ContainsKey(property))
+        if (properties != null && properties.ContainsKey(property))
         {
             return properties[property];
         }

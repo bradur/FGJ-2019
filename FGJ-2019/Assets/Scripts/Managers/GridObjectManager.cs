@@ -11,8 +11,16 @@ public class GridObjectManager : MonoBehaviour {
     public static GridObjectManager main;
 
     private List<GridObject> gridObjects = new List<GridObject>();
-    void Start () {
+    void Awake () {
         main = this;
+    }
+
+    public void MapLoaded()
+    {
+        foreach (GridObject gridObject in gridObjects)
+        {
+            gridObject.MapLoaded();
+        }
     }
 
     public void AddGridObject(GridObject gridObject) {

@@ -11,20 +11,37 @@ public class Dog : MonoBehaviour
     public Vector2 leashOrigin;
     TrackedPosition playerPosition;
 
-    Rigidbody2D rigidbody;
+    Rigidbody rigidbody;
     Animator anim;
     SpriteRenderer renderer;
+    GridObject gridObject;
 
     Vector2 desiredMoveDirection;
+    bool leashed = false;
+
+    string PROPERTY_LEASHID = "leashId";
 
     // Use this for initialization
     void Start ()
     {
-        rigidbody = gameObject.GetComponent<Rigidbody2D>();
+
+    }
+
+    public void Init()
+    {
+        rigidbody = gameObject.GetComponent<Rigidbody>();
         anim = gameObject.GetComponent<Animator>();
         renderer = gameObject.GetComponent<SpriteRenderer>();
-
+        gridObject = GetComponent<GridObject>();
         playerPosition = GameManager.main.Config.PlayerPosition;
+
+        int leashId = gridObject.GetIntProperty(PROPERTY_LEASHID);
+        if (leashId > -1)
+        {
+            List<GridObject> leashObjects = GridObjectManager.main.GetGridObjectsByPropertyValue(PROPERTY_LEASHID, leashId);
+            leashOrigin = leashObjects[0].transform.position;
+            leashed = true;
+        }
     }
 	
 	// Update is called once per frame
@@ -34,7 +51,7 @@ public class Dog : MonoBehaviour
         var distanceToPlayer = Vector2.Distance(curPos, playerPosition.Position);
         if (distanceToPlayer < aggroRange)
         {
-            var playerInsideLeashRange = leashOrigin != null && Vector2.Distance(leashOrigin, playerPosition.Position) <= leashRange;
+            var playerInsideLeashRange = !leashed || Vector2.Distance(leashOrigin, playerPosition.Position) <= leashRange;
             Vector2 targetPos;
             if (playerInsideLeashRange)
             {
@@ -48,7 +65,7 @@ public class Dog : MonoBehaviour
             rigidbody.velocity = desiredMoveDirection.normalized * moveSpeed;
         } else
         {
-            rigidbody.velocity = Vector2.zero;
+            rigidbody.velocity = Vector3.zero;
         }
 
         if (rigidbody.velocity.magnitude > 0.001f)
