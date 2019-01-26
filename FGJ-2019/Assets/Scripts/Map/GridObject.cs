@@ -38,9 +38,13 @@ public class GridObject : MonoBehaviour
         return Tools.IntParseFast(GetStringProperty(propertyName));
     }
 
-    public float getFloatProperty(string propertyName)
+    public float GetFloatProperty(string propertyName)
     {
-        return Tools.FloatParse(GetStringProperty(propertyName));
+        string propertyValue = GetStringProperty(propertyName);
+        if (propertyValue != null) {
+            return Tools.FloatParse(propertyValue);
+        }
+        return -1;
     }
 
     public bool getBoolProperty(string propertyName)
