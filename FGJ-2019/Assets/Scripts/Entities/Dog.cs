@@ -15,6 +15,7 @@ public class Dog : MonoBehaviour
     Animator anim;
     SpriteRenderer renderer;
     GridObject gridObject;
+    LineRenderer lineRenderer;
 
     Vector2 desiredMoveDirection;
     bool leashed = false;
@@ -35,11 +36,11 @@ public class Dog : MonoBehaviour
         anim = gameObject.GetComponent<Animator>();
         renderer = gameObject.GetComponent<SpriteRenderer>();
         gridObject = GetComponent<GridObject>();
+        lineRenderer = GetComponent<LineRenderer>();
         playerPosition = GameManager.main.Config.PlayerPosition;
 
         leashRange = gridObject.GetFloatProperty(PROPERTY_LEASHRANGE);
         aggroRange = gridObject.GetFloatProperty(PROPERTY_AGGRORANGE);
-        print(leashRange);
         int leashId = gridObject.GetIntProperty(PROPERTY_LEASHID);
         if (leashId > -1)
         {
@@ -90,6 +91,12 @@ public class Dog : MonoBehaviour
         if (horizontalDistance < -0.001f)
         {
             renderer.flipX = true;
+        }
+
+        if (leashed)
+        {
+            lineRenderer.SetPosition(0, leashOrigin);
+            lineRenderer.SetPosition(1, transform.position);
         }
     }
 
