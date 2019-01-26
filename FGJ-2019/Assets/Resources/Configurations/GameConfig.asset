@@ -26,4 +26,21 @@ MonoBehaviour:
   uiForegroundColor: {r: 1, g: 1, b: 1, a: 1}
   uiTextAnimationSpeed: 15.3
   dialogueSkipKey: 32
-  colliderConfigs: []
+  colliderConfigs:
+  - {fileID: 11400000, guid: eae188c8c88005441a547184f4f05da8, type: 2}
+  - {fileID: 11400000, guid: 74e723dee23582c47b2a5163440eac24, type: 2}
+  - {fileID: 11400000, guid: 02f3aa504fbd81c4a9ebb815a39a2de2, type: 2}
+  - {fileID: 11400000, guid: 1344cdca679cacd4cb328727ab47d83a, type: 2}
+  - {fileID: 11400000, guid: 0aa60623814a9924fb34677e783728a8, type: 2}
+  - {fileID: 11400000, guid: 226cada571c988f4789b572f83d4527c, type: 2}
+  - {fileID: 11400000, guid: f4d1d9e732bb1a6469c01007e4480d35, type: 2}
+  - {fileID: 11400000, guid: d5690ea46d57dbf4f8658353b217855f, type: 2}
+  - {fileID: 11400000, guid: 9793f58c394133945815b7214dcb2b96, type: 2}
+  - {fileID: 11400000, guid: c892028e7a623cd4092fac4ce8a143dd, type: 2}
+  - {fileID: 11400000, guid: cae6b85c50f076c44a72032da1761964, type: 2}
+  - {fileID: 11400000, guid: 57b8ad43da3517746a6509c14ea5233a, type: 2}
+  - {fileID: 11400000, guid: 8c534b7d1242f1f4bb7a57adfa939460, type: 2}
+  - {fileID: 11400000, guid: 52d4e05615f5ce945b0638dc8d751e4e, type: 2}
+  - {fileID: 11400000, guid: a53268a45546f7d4397d0396d995c44a, type: 2}
+  - {fileID: 11400000, guid: 2a862de921e61444b9621fb13e971ab2, type: 2}
+  - {fileID: 11400000, guid: dafba011ddf4a5341b3badbe9ef43f39, type: 2}
