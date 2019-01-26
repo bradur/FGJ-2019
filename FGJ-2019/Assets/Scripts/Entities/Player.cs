@@ -54,7 +54,12 @@ public class Player : MonoBehaviour {
             renderer.flipX = true;
         }
         if(Input.GetKeyDown(KeyCode.Space)) {
-            Debug.Log(gridObject.GetIntProperty("activateId"));
+            string property = "activationId";
+            Debug.Log(gridObject.GetIntProperty(property));
+            List<GridObject> activateObjects = GridObjectManager.main.GetGridObjectsByPropertyValue(property, gridObject.GetIntProperty(property));
+            foreach (GridObject activateObject in activateObjects) {
+                Debug.Log(activateObject);
+            }
         }
     }
 

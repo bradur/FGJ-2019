@@ -117,6 +117,7 @@ public class TiledMap : MonoBehaviour
             );
 
             newObject.Initialize(objectConfig, objectPosition, tmxObject.Properties);
+            GridObjectManager.main.AddGridObject(newObject);
         }
     }
 
