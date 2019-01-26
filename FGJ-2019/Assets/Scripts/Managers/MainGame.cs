@@ -8,7 +8,7 @@ public class MainGame : MonoBehaviour {
 
     public TiledMap tiledMap;
 
-    int currentLevelIndex = 0;
+    int currentLevelIndex = -1;
     
     GameObject currentLevel;
 
@@ -19,7 +19,8 @@ public class MainGame : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        RestartLevel();
+        UIManager.main.Initialize();
+        LoadNextLevel();
 	}
 	
 	// Update is called once per frame
@@ -38,15 +39,15 @@ public class MainGame : MonoBehaviour {
 
     public void RestartLevel()
     {
-        loadLevel(currentLevelIndex);
+        loadLevel(currentLevelIndex, false);
     }
 
     public void LoadNextLevel()
     {
-        loadLevel(++currentLevelIndex);
+        loadLevel(++currentLevelIndex, true);
     }
 
-    private void loadLevel(int level)
+    private void loadLevel(int level, bool showTexts)
     {
         Destroy(currentLevel);
 
@@ -62,7 +63,7 @@ public class MainGame : MonoBehaviour {
         GridTileLayerManager.main.Reset();
         GameManager.main.Reset();
         currentLevel = new GameObject("Level " + level);
-        tiledMap.LoadLevel(newLevel.text, currentLevel);
+        tiledMap.LoadLevel(newLevel.text, currentLevel, showTexts);
     }
 
     private void finish()

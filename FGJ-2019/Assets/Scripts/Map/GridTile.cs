@@ -49,6 +49,10 @@ public class GridTile : MonoBehaviour
         }
         else
         {
+            if (spriteRenderer == null)
+            {
+                print("asd");
+            }
             spriteRenderer.sortingOrder = y * 9;
         }
 
