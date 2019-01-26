@@ -3,6 +3,7 @@
 using UnityEngine;
 using TiledSharp;
 using System.IO;
+using System.Collections.Generic;
 
 public class Tools : MonoBehaviour
 {
@@ -93,5 +94,20 @@ public class Tools : MonoBehaviour
             secondHalf = originalString.Substring(subStringEndIndex);
         }
         return string.Format("{0}{1}{2}", firstHalf, replacement, secondHalf);
-    } 
+    }
+
+    public static List<string> getTexts(PropertyDict properties)
+    {
+        var result = new List<string>();
+        var i = 0;
+        var key = "text" + i;
+        var text = GetProperty(properties, key);
+        while (text != null && text.Length > 0)
+        {
+            result.Add(text);
+            key = "text" + ++i;
+            text = GetProperty(properties, key);
+        }
+        return result;
+    }
 }

@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.2" tiledversion="1.2.1" orientation="orthogonal" renderorder="right-down" width="25" height="20" tilewidth="64" tileheight="64" infinite="0" nextlayerid="111" nextobjectid="13">
+ <properties>
+  <property name="text0" value="Juttu 0"/>
+  <property name="text1" value="Juttu 1"/>
+  <property name="text2" value="Juttu 2"/>
+ </properties>
  <tileset firstgid="1" source="../TileSets/baseTileset.xml"/>
  <layer id="1" name="ground" width="25" height="20">
   <data encoding="base64" compression="zlib">
@@ -8,7 +13,7 @@
  </layer>
  <layer id="2" name="obstacles" width="25" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjYCAdpBKJKQGJUJyCxE7CIkYuUAZiJTSsQoF52IAikWLUtoPagB7+UGWAxIETAyI+1KhsxyigPxCE0kJQWhhKi0BpUSgtRjcXkQdg6V0JSitDaViZoQqlR9MsolxOgtIpUJrSOmEUEAYAVqsNAQ==
+   eJxjYCAdpBKJKQGJUJyCxE7CIkYuUAZiJTSsQoF52IAikWLUtoPagB7+UGWAxAEDAyI+1KhsB72BMJQWoaEdylCa2mmX3kAVSg/1OB8Fo2AgAQDXBAqi
   </data>
  </layer>
  <objectgroup id="110" name="Object Layer 1">
@@ -85,12 +90,7 @@
  </objectgroup>
  <layer id="3" name="nonblocking" width="25" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjYBh8QBiIhdCwCA61gfRyFBlAcIDsoLa9ogyQODBiQMSHGJXtGAWjYBSMglFAGQAA2ccBhw==
-  </data>
- </layer>
- <layer id="4" name="collision" width="25" height="20">
-  <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUjIJRMApGwVAHAAfQAAE=
+   eJxjYBh8QBiIhdCwCA61gfRyFBlAcIDsoLa9ogyQOGBgQMSHGJXtGAWDF4hC6dE4HwWjYHADAFzzAYA=
   </data>
  </layer>
 </map>

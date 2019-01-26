@@ -33,7 +33,7 @@ public class TiledMap : MonoBehaviour
     {
     }
 
-    public void LoadLevel(string levelData, GameObject scene)
+    public void LoadLevel(string levelData, GameObject scene, bool showTexts)
     {
         config = GameManager.main.Config;
         gridLayerConfigs = Resources.LoadAll<GridLayerConfig>("Configurations/GridLayers");
@@ -43,6 +43,12 @@ public class TiledMap : MonoBehaviour
         XDocument mapX = XDocument.Parse(levelData);
         TmxMap map = new TmxMap(mapX);
         InitializeMap(map);
+
+        if (showTexts)
+        {
+            var texts = Tools.getTexts(map.Properties);
+            UIManager.main.ShowMessages(texts);
+        }
     }
 
     public void InitializeMap(TmxMap map)

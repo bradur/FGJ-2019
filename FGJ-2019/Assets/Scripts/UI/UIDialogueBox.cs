@@ -111,7 +111,7 @@ public class UIDialogueBox : MonoBehaviour
         }
     }
 
-    private void Start()
+    public void Initialize()
     {
         animator = GetComponent<Animator>();
         config = GameManager.main.Config;
@@ -120,12 +120,6 @@ public class UIDialogueBox : MonoBehaviour
         txtDialogue.color = config.UIForegroundColor;
         textAnimationSpeed = config.UITextAnimationSpeed;
         txtDialogue.text = "";
-        //AnimateMessage("Hello world!");
-        AnimateListOfMessages(new List<string>() {
-            "I am an alien.",
-            "What is home?",
-            "Let's see if we can peek inside that house."
-        });
     }
 
 
