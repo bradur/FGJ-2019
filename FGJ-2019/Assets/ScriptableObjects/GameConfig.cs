@@ -23,4 +23,7 @@ public class GameConfig : ScriptableObject
     private Player playerPrefab;
     public Player PlayerPrefab { get { return playerPrefab; } }
 
+    [SerializeField]
+    private TrackedPosition playerPosition;
+    public TrackedPosition PlayerPosition { get { return playerPosition; } }
 }

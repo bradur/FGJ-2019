@@ -18,3 +18,4 @@ MonoBehaviour:
     type: 2}
   playerPrefab: {fileID: 114861618396022474, guid: ebcebc0ec35130741a05b17e6872a167,
     type: 2}
+  playerPosition: {fileID: 11400000, guid: b457a949edd90aa489d4ac4188edf191, type: 2}

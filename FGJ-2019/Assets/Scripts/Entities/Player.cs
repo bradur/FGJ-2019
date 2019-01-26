@@ -12,12 +12,18 @@ public class Player : MonoBehaviour {
     
     Vector2 desiredMoveDirection;
 
-	// Use this for initialization
-	void Start () {
+    TrackedPosition playerPosition;
+
+    // Use this for initialization
+    void Start()
+    {
         rigidbody = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
         renderer = gameObject.GetComponent<SpriteRenderer>();
-	}
+
+        playerPosition = GameManager.main.Config.PlayerPosition;
+        updatePlayerPosition();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -51,6 +57,13 @@ public class Player : MonoBehaviour {
         {
             renderer.flipX = true;
         }
+
+        updatePlayerPosition();
+    }
+
+    private void updatePlayerPosition()
+    {
+        playerPosition.Position = transform.position;
     }
 
     private void FixedUpdate()
