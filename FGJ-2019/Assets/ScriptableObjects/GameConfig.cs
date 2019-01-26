@@ -11,6 +11,12 @@ public class GameConfig : ScriptableObject
     private TextAsset firstLevel;
     public TextAsset FirstLevel { get { return firstLevel; } }
 
+    [Header("Tracked Positions")]
+    [SerializeField]
+    private TrackedPosition playerPosition;
+    public TrackedPosition PlayerPosition { get { return playerPosition; } }
+
+    [Header("Prefabs")]
     [SerializeField]
     private GridTile gridTilePrefab;
     public GridTile GridTilePrefab { get { return gridTilePrefab; } }
@@ -24,6 +30,6 @@ public class GameConfig : ScriptableObject
     public Player PlayerPrefab { get { return playerPrefab; } }
 
     [SerializeField]
-    private TrackedPosition playerPosition;
-    public TrackedPosition PlayerPosition { get { return playerPosition; } }
+    private GridTileLayer gridTileLayerPrefab;
+    public GridTileLayer GridTileLayerPrefab { get { return gridTileLayerPrefab; } }
 }

@@ -12,5 +12,11 @@ public class GridLayerConfig : ScriptableObject
     private string objectName = "New GridLayerConfig";
     public string Name { get { return objectName; } }
 
-    
+    [SerializeField]
+    private GridTile overridePrefab;
+    public GridTile OverridePrefab { get { return overridePrefab; } }
+
+    [SerializeField]
+    private Material overrideMaterial;
+    public Material OverrideMaterial { get { return overrideMaterial; } }
 }

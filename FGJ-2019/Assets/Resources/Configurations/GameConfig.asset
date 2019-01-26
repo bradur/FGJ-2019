@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Name: GameConfig
   m_EditorClassIdentifier: 
   firstLevel: {fileID: 4900000, guid: 01383d76e4c7d9c4185ada479753445c, type: 3}
+  playerPosition: {fileID: 11400000, guid: b457a949edd90aa489d4ac4188edf191, type: 2}
   gridTilePrefab: {fileID: 114182515756426414, guid: 8e2fca2b9a26c0c479b3c65bec18bb85,
     type: 2}
   containerPrefab: {fileID: 4395986411700506, guid: 2ec718a8798335f48b15fdffa2f944c4,
     type: 2}
   playerPrefab: {fileID: 114861618396022474, guid: ebcebc0ec35130741a05b17e6872a167,
     type: 2}
-  playerPosition: {fileID: 11400000, guid: b457a949edd90aa489d4ac4188edf191, type: 2}
+  gridTileLayerPrefab: {fileID: 114914391167225038, guid: 79eb00f776dbbc546b68533baf57ee92,
+    type: 2}

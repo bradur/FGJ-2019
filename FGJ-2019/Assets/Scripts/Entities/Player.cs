@@ -6,9 +6,9 @@ public class Player : MonoBehaviour {
 
     public float moveSpeed = 20;
 
-    Rigidbody2D rigidbody;
+    Rigidbody rigidbody3D;
     Animator anim;
-    SpriteRenderer renderer;
+    SpriteRenderer spriteRenderer;
     GridObject gridObject;
 
     Vector2 desiredMoveDirection;
@@ -17,9 +17,9 @@ public class Player : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        rigidbody = gameObject.GetComponent<Rigidbody2D>();
+        rigidbody3D = gameObject.GetComponent<Rigidbody>();
         anim = gameObject.GetComponent<Animator>();
-        renderer = gameObject.GetComponent<SpriteRenderer>();
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         gridObject = GetComponent<GridObject>();
 
         playerPosition = GameManager.main.Config.PlayerPosition;
@@ -38,9 +38,9 @@ public class Player : MonoBehaviour {
         var right = Vector2.right;
 
         desiredMoveDirection = up * verticalAxis + right * horizontalAxis;
-        rigidbody.velocity = desiredMoveDirection * moveSpeed;
+        rigidbody3D.velocity = desiredMoveDirection * moveSpeed;
 
-        if (rigidbody.velocity.magnitude > 0.001f)
+        if (rigidbody3D.velocity.magnitude > 0.001f)
         {
             anim.Play("walk");
         } else
@@ -48,15 +48,15 @@ public class Player : MonoBehaviour {
             anim.Play("idle");
         }
 
-        var horizontal_velocity = rigidbody.velocity.x;
+        var horizontal_velocity = rigidbody3D.velocity.x;
 
         if (horizontal_velocity > 0.001f)
         {
-            renderer.flipX = false;
+            spriteRenderer.flipX = false;
         }
         if (horizontal_velocity < -0.001f)
         {
-            renderer.flipX = true;
+            spriteRenderer.flipX = true;
         }
 
         updatePlayerPosition();
