@@ -21,3 +21,22 @@ MonoBehaviour:
     type: 2}
   gridTileLayerPrefab: {fileID: 114914391167225038, guid: 79eb00f776dbbc546b68533baf57ee92,
     type: 2}
+  colliderConfigs:
+  - {fileID: 11400000, guid: eae188c8c88005441a547184f4f05da8, type: 2}
+  - {fileID: 11400000, guid: 74e723dee23582c47b2a5163440eac24, type: 2}
+  - {fileID: 11400000, guid: 02f3aa504fbd81c4a9ebb815a39a2de2, type: 2}
+  - {fileID: 11400000, guid: 1344cdca679cacd4cb328727ab47d83a, type: 2}
+  - {fileID: 11400000, guid: 0aa60623814a9924fb34677e783728a8, type: 2}
+  - {fileID: 11400000, guid: 226cada571c988f4789b572f83d4527c, type: 2}
+  - {fileID: 11400000, guid: f4d1d9e732bb1a6469c01007e4480d35, type: 2}
+  - {fileID: 11400000, guid: d5690ea46d57dbf4f8658353b217855f, type: 2}
+  - {fileID: 11400000, guid: 9793f58c394133945815b7214dcb2b96, type: 2}
+  - {fileID: 11400000, guid: c892028e7a623cd4092fac4ce8a143dd, type: 2}
+  - {fileID: 11400000, guid: cae6b85c50f076c44a72032da1761964, type: 2}
+  - {fileID: 11400000, guid: 57b8ad43da3517746a6509c14ea5233a, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

@@ -32,4 +32,9 @@ public class GameConfig : ScriptableObject
     [SerializeField]
     private GridTileLayer gridTileLayerPrefab;
     public GridTileLayer GridTileLayerPrefab { get { return gridTileLayerPrefab; } }
+
+    [Header("Other configs")]
+    [SerializeField]
+    private List<ColliderConfig> colliderConfigs;
+    public List<ColliderConfig> ColliderConfigs { get { return colliderConfigs; } }
 }
