@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.2.1" orientation="orthogonal" renderorder="right-down" width="25" height="20" tilewidth="64" tileheight="64" infinite="0" nextlayerid="111" nextobjectid="33">
+<map version="1.2" tiledversion="1.2.1" orientation="orthogonal" renderorder="right-down" width="25" height="20" tilewidth="64" tileheight="64" infinite="0" nextlayerid="111" nextobjectid="34">
+ <properties>
+  <property name="text0" value="This 'Home' seems like an intriguing concept."/>
+  <property name="text1" value="There seems to be a sensation of warmth inside me."/>
+  <property name="text2">But that doesn't correlate with the current temperature of outside air.
+Odd.</property>
+ </properties>
  <tileset firstgid="1" source="../TileSets/baseTileset.xml"/>
  <layer id="1" name="ground" width="25" height="20">
   <data encoding="csv">
@@ -145,6 +151,13 @@
     <property name="cycleTime" type="float" value="3"/>
     <property name="radius" value="3"/>
     <property name="rotation" value="270"/>
+   </properties>
+  </object>
+  <object id="33" type="Window" gid="255" x="640" y="256" width="64" height="64">
+   <properties>
+    <property name="text0" value="This specimen has built a porcelain seat."/>
+    <property name="text1" value="My facial expression interpreter tells this seat causes pain."/>
+    <property name="text2" value="Why, though?"/>
    </properties>
   </object>
  </objectgroup>
