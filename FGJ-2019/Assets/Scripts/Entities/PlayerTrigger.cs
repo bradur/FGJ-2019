@@ -20,7 +20,7 @@ public class PlayerTrigger : MonoBehaviour {
     void OnTriggerEnter (Collider collider) {
         // detect LightVision hits here
         Debug.Log(string.Format("{0} was hit by {1}", gameObject, collider.gameObject));
-        GameManager.main.PlayerDied("You were seen!");
+        GameManager.main.PlayerDied("Eek! I've been seen!");
     }
 
 }
