@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94a6b64ec6ef5404d8aded30e3b92fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
 --- !u!114 &114484473500614538
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -101,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fad72c20e26709042b02652989a4da43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  moveSpeed: 3
   aggroRange: 5
   leashOrigin: {x: 0, y: 0}
 --- !u!120 &120857697115942190

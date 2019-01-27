@@ -55,8 +55,15 @@ public class Dog : MonoBehaviour
         if (leashId > -1)
         {
             List<GridObject> leashObjects = GridObjectManager.main.GetGridObjectsByPropertyValue(PROPERTY_LEASHID, leashId);
-            leashOrigin = leashObjects[0].transform.position;
-            leashed = true;
+            foreach (GridObject obj in leashObjects)
+            {
+                Dog dog = obj.gameObject.GetComponent<Dog>();
+                if (dog == null)
+                {
+                    leashOrigin = obj.transform.position;
+                    leashed = true;
+                }
+            }
         } else {
             lineRenderer.enabled = false;
         }
