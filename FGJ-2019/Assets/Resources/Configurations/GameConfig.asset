@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: GameConfig
   m_EditorClassIdentifier: 
   levels:
+  - {fileID: 4900000, guid: 69a97dc9690bc704f9c7220e1bd10d7c, type: 3}
   - {fileID: 4900000, guid: 181cc8e8a9e0a4e4d8d63aa62792256f, type: 3}
   - {fileID: 4900000, guid: b2522c6c01440cd49b46dfe02f01d217, type: 3}
   playerPosition: {fileID: 11400000, guid: b457a949edd90aa489d4ac4188edf191, type: 2}
