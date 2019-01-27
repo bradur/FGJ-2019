@@ -17,6 +17,9 @@ public class UIManager : MonoBehaviour {
 
     [SerializeField]
     private UIDialogueBox uIDialogueBox;
+    [SerializeField]
+    private Image endScreen;
+
     public void ShowMessage(string message) {
         uIDialogueBox.AnimateMessage(message);
     }
@@ -34,6 +37,11 @@ public class UIManager : MonoBehaviour {
     public void Hide()
     {
         uIDialogueBox.Hide();
+    }
+
+    public void ShowEnd()
+    {
+        endScreen.gameObject.SetActive(true);
     }
 
 }
