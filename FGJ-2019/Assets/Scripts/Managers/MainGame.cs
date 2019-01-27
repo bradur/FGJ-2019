@@ -68,6 +68,9 @@ public class MainGame : MonoBehaviour {
 
     private void finish()
     {
+        List<string> endText = new List<string>();
+        endText.Add("sdfgsfgasdf");
+        UIManager.main.ShowEnd();
         print("GAME FINISHED");
     }
 }
