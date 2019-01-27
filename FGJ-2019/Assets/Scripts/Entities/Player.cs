@@ -61,7 +61,7 @@ public class Player : MonoBehaviour {
         }
 
         updatePlayerPosition();
-        spriteRenderer.sortingOrder = (int)Math.Floor(transform.position.y * 10);
+        spriteRenderer.sortingOrder = -(int)Math.Floor(transform.position.y * 10);
 
     }
 
