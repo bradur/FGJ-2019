@@ -138,6 +138,7 @@ public class VisionLight : MonoBehaviour {
         if (cycleTime < currentTime - cycleStartTime)
         {
             viewMeshFilter.gameObject.SetActive(!viewMeshFilter.gameObject.activeSelf);
+            SoundManager.main.PlaySound(viewMeshFilter.gameObject.activeSelf ? SoundType.LightOn : SoundType.LightOff);
             cycleStartTime = currentTime;
         }
 
