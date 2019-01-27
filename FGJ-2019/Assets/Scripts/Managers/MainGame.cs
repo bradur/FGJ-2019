@@ -70,6 +70,7 @@ public class MainGame : MonoBehaviour {
     {
         List<string> endText = new List<string>();
         endText.Add("Now I, too, have a home.");
+        UIManager.main.ShowMessages(endText);
         UIManager.main.ShowEnd();
         print("GAME FINISHED");
     }
