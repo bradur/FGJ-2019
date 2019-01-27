@@ -53,8 +53,11 @@
   </object>
   <object id="13" type="Window" gid="255" x="192" y="192" width="64" height="64">
    <properties>
-    <property name="text0" value="You see butt."/>
-    <property name="text1" value="Good job ..."/>
+    <property name="text0" value="These specimens also refer to this place as 'Home'."/>
+    <property name="text1">It is different, though. 
+
+Nobody is feeding here.</property>
+    <property name="text2" value="There are many Homes, it seems.\n\nAnd they seem to carry many purposes."/>
    </properties>
   </object>
   <object id="14" type="Light" gid="255" x="640" y="512" width="64" height="64">

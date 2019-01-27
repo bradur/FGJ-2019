@@ -50,6 +50,7 @@
    <properties>
     <property name="text0" value="A fire."/>
     <property name="text1" value="Why is there a fire indoors?"/>
+    <property name="text2" value="Is a fire a part of this concept called 'Home'?"/>
    </properties>
   </object>
   <object id="14" type="Light" gid="255" x="384" y="512" width="64" height="64">

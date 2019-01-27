@@ -58,8 +58,9 @@
   <object id="1" type="Player" gid="111" x="192" y="1152" width="64" height="64"/>
   <object id="13" type="Window" gid="255" x="1216" y="256" width="64" height="64">
    <properties>
-    <property name="text0" value="You see butt."/>
-    <property name="text1" value="Good job ..."/>
+    <property name="text0" value="I can hear them call this place 'Home'."/>
+    <property name="text1" value="My universal translator doesn't have a corresponding entry."/>
+    <property name="text2" value="I wonder what that means."/>
    </properties>
   </object>
   <object id="20" type="Light" gid="112" x="384" y="640" width="64" height="64">
