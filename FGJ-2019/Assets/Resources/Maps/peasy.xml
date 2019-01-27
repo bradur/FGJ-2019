@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.2.1" orientation="orthogonal" renderorder="right-down" width="13" height="15" tilewidth="64" tileheight="64" infinite="0" nextlayerid="114" nextobjectid="15">
+<map version="1.2" tiledversion="1.2.1" orientation="orthogonal" renderorder="right-down" width="13" height="15" tilewidth="64" tileheight="64" infinite="0" nextlayerid="115" nextobjectid="15">
  <properties>
   <property name="text0" value="There's a smaller creature there. It appears more primitive than the bigger ones I saw earlier."/>
   <property name="text1" value="Visual analysis indicates it is aggressive. I shouldn't try to approach it."/>
@@ -70,7 +70,7 @@
  <layer id="113" name="nonblocking" width="13" height="15">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,130,130,130,130,130,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,18,18,20,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,101,101,0,0,0,0,0,
@@ -82,6 +82,25 @@
 0,0,0,0,19,18,18,18,18,18,18,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,18,18,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="114" name="decorations" width="13" height="15">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,130,130,130,130,130,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
