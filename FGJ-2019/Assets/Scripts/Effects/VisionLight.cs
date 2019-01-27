@@ -68,6 +68,7 @@ public class VisionLight : MonoBehaviour {
 
     private bool started = false;
     private float initialRotation;
+    private float initTime;
 
     private float cycleStartTime = 0;
     private float cycleTime = 9999999f;
@@ -90,6 +91,7 @@ public class VisionLight : MonoBehaviour {
         }
 
         initialRotation = transform.localEulerAngles.y;
+        initTime = Time.time;
         viewRadius = radius;
         float cycleOffset = gridObject.GetFloatProperty(PROPERTY_CYCLE_OFFSET);
         if(cycleOffset > -1)
@@ -338,7 +340,7 @@ public class VisionLight : MonoBehaviour {
     {
         if (turnAngle > 0 && turnSpeed > 0)
         {
-            var rotY = turnAngle * Mathf.Sin(Time.time / turnSpeed);
+            var rotY = turnAngle * Mathf.Sin((Time.time - initTime) / turnSpeed);
             Vector3 currentRotation = transform.localEulerAngles;
             currentRotation.y = initialRotation + rotY;
             transform.localEulerAngles = currentRotation;

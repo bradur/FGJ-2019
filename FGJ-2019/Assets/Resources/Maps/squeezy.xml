@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.1" orientation="orthogonal" renderorder="right-down" width="13" height="15" tilewidth="64" tileheight="64" infinite="0" nextlayerid="114" nextobjectid="25">
+ <properties>
+  <property name="text0" value="Another of those small primitive creatures."/>
+  <property name="text1" value="This one seems to carry some kind of cable around."/>
+  <property name="text2" value="This one is fluffy, too."/>
+ </properties>
+ <tileset firstgid="1" source="../TileSets/baseTileset.xml"/>
+ <layer id="111" name="ground" width="13" height="15">
+  <data encoding="csv">
+3,1,2,3,3,2,4,2,2,2,1,2,3,
+2,2,2,2,2,1,2,2,2,1,1,3,2,
+3,4,1,1,2,2,3,3,2,1,4,3,3,
+4,1,1,2,4,2,1,2,3,1,1,2,2,
+3,4,1,4,1,1,3,3,2,2,2,3,2,
+1,3,2,3,1,4,1,1,3,1,3,3,2,
+2,1,1,1,2,3,1,4,2,2,3,2,2,
+1,2,2,3,3,4,1,1,2,1,1,1,2,
+1,3,3,3,3,2,3,4,1,3,3,2,1,
+3,2,4,2,1,2,2,1,2,3,2,3,3,
+4,3,2,1,2,3,4,1,2,1,2,3,3,
+1,3,1,2,1,1,2,3,2,2,2,2,3,
+3,2,3,1,2,1,2,3,4,1,1,4,3,
+2,3,1,3,2,1,3,1,1,1,2,3,1,
+1,3,4,4,2,2,2,1,1,3,2,2,1
+</data>
+ </layer>
+ <layer id="112" name="obstacles" width="13" height="15">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,101,101,101,101,0,
+0,0,0,0,19,18,18,18,101,101,101,101,20,
+0,19,101,101,101,34,34,34,97,98,97,100,36,
+0,35,97,34,97,0,0,0,0,0,0,0,24,
+0,17,0,0,0,0,35,0,0,0,34,34,36,
+0,21,0,0,0,0,17,0,0,0,0,0,17,
+0,37,34,34,36,0,17,0,0,0,0,0,17,
+0,0,0,0,17,0,21,0,0,0,0,0,24,
+0,0,0,0,17,0,37,34,0,0,34,34,36,
+0,0,0,0,17,0,0,0,0,0,0,0,17,
+0,0,0,0,21,0,0,0,0,0,0,0,22,
+0,0,0,0,37,34,34,34,36,0,35,34,38,
+0,0,0,0,0,0,0,0,17,0,17,0,0,
+0,0,0,0,0,0,0,0,21,0,22,0,0,
+0,0,0,0,0,0,0,0,37,34,38,0,0
+</data>
+ </layer>
+ <objectgroup id="110" name="Object Layer 1">
+  <object id="1" type="Player" gid="255" x="576" y="832" width="64" height="64"/>
+  <object id="12" type="Dog" gid="255" x="576" y="512" width="64" height="64">
+   <properties>
+    <property name="aggroRange" type="int" value="4"/>
+    <property name="leashId" type="int" value="1"/>
+    <property name="leashRange" type="float" value="3.5"/>
+   </properties>
+  </object>
+  <object id="13" type="Window" gid="255" x="704" y="256" width="64" height="64">
+   <properties>
+    <property name="text0" value="These specimens are inactive."/>
+    <property name="text1" value="It seems a horizontal position is required for their hibernation."/>
+    <property name="text2" value="I wonder if their reproduction has similar requirements."/>
+   </properties>
+  </object>
+  <object id="15" type="Lever" gid="255" x="128" y="320" width="64" height="64">
+   <properties>
+    <property name="activationId" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="16" type="Lever" gid="255" x="704" y="640" width="64" height="64">
+   <properties>
+    <property name="activationId" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="17" type="Gate" gid="255" x="576" y="320" width="64" height="64">
+   <properties>
+    <property name="activationId" type="int" value="2"/>
+    <property name="closed" type="bool" value="false"/>
+    <property name="horizontal" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="20" type="Gate" gid="255" x="512" y="320" width="64" height="64">
+   <properties>
+    <property name="activationId" type="int" value="2"/>
+    <property name="closed" type="bool" value="false"/>
+    <property name="horizontal" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="21" type="Gate" gid="255" x="448" y="320" width="64" height="64">
+   <properties>
+    <property name="activationId" type="int" value="2"/>
+    <property name="closed" type="bool" value="false"/>
+    <property name="horizontal" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="22" type="Gate" gid="255" x="640" y="640" width="64" height="64">
+   <properties>
+    <property name="activationId" type="int" value="1"/>
+    <property name="closed" type="bool" value="true"/>
+    <property name="horizontal" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="23" type="Leash" gid="255" x="640" y="384" width="64" height="64">
+   <properties>
+    <property name="leashId" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="24" type="Gate" gid="255" x="640" y="704" width="64" height="64">
+   <properties>
+    <property name="activationId" type="int" value="1"/>
+    <property name="closed" type="bool" value="true"/>
+    <property name="horizontal" type="bool" value="false"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="113" name="nonblocking" width="13" height="15">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,129,0,0,19,0,0,0,18,18,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,18,18,20,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,18,0,0,18,18,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,18,18,18,20,0,19,18,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,18,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+</map>
