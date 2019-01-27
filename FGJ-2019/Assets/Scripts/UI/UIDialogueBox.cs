@@ -38,6 +38,7 @@ public class UIDialogueBox : MonoBehaviour
 
     public void AnimateMessage(string message)
     {
+        animator.ResetTrigger(ANIMATION_HIDE);
         if (hidden) {
             animator.SetTrigger(ANIMATION_SHOW);
         }

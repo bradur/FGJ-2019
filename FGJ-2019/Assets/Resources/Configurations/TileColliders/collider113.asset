@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Name: collider113
   m_EditorClassIdentifier: 
   colliders:
-  - centerX: -0.35
+  - centerX: -0.4
     centerY: 0
-    width: 0.2
+    width: 0.6
     height: 1
   name: collider100
   description: 
