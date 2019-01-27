@@ -40,7 +40,7 @@ public class GridTile : MonoBehaviour
                 col.size = new Vector3(param.width, param.height, 2f);
             }
             gameObject.layer = LayerMask.NameToLayer("Wall");
-            spriteRenderer.sortingOrder = y * 10 - 10;
+            spriteRenderer.sortingOrder = -(y * 10);
             gameObject.layer = LayerMask.NameToLayer("Wall");
         }
         else if(layerName == "ground")
@@ -54,7 +54,7 @@ public class GridTile : MonoBehaviour
             {
                 print("asd");
             }
-            spriteRenderer.sortingOrder = y * 9;
+            spriteRenderer.sortingOrder = -(y * 9) + 15;
         }
 
         transform.position = new Vector2(x, y);
