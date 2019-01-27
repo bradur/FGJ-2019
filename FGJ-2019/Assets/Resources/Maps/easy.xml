@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.2" tiledversion="1.2.1" orientation="orthogonal" renderorder="right-down" width="25" height="20" tilewidth="64" tileheight="64" infinite="0" nextlayerid="111" nextobjectid="25">
  <properties>
-  <property name="text0" value="This area seems well guarded."/>
-  <property name="text1" value="I must be extra careful here."/>
+  <property name="text0" value="I must conduct more research on this species and its habits."/>
+  <property name="text1" value="This area seems well guarded."/>
+  <property name="text2" value="I must be extra careful here."/>
  </properties>
  <tileset firstgid="1" source="../TileSets/baseTileset.xml"/>
  <layer id="1" name="ground" width="25" height="20">

@@ -47,8 +47,8 @@
   <object id="13" type="Window" gid="255" x="320" y="256" width="64" height="64">
    <properties>
     <property name="text0" value="Wow, they're big."/>
-    <property name="text1" value="But inactive."/>
-    <property name="text2" value="Maybe this species hibernates. I better find some more active specimens."/>
+    <property name="text1" value="This seems to be their feeding ground."/>
+    <property name="text2" value="Savage."/>
    </properties>
   </object>
   <object id="23" type="Light" gid="112" x="128" y="256" width="64" height="64">
