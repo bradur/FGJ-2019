@@ -29,7 +29,7 @@ public class GridObject : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer != null)
         {
-            spriteRenderer.sortingOrder = (int)Math.Floor(transform.position.y * 10);
+            spriteRenderer.sortingOrder = (int)Math.Floor(transform.position.y * 10)+10-1;
         }
     }
 

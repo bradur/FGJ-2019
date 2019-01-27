@@ -13,7 +13,7 @@
  </layer>
  <layer id="2" name="obstacles" width="25" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjYCAdpBKJKQGJUJyCxE7CIkYuUAZiJTSsQoF52IAikWLUtoPagB7+UGWAxAEDAyI+1KhsB72BMJQWoaEdylCa2mmX3kAVSg/1OB8Fo2AgAQDXBAqi
+   eJxjYCAdpBKJKQGJUJyCxE7CIkYuUAZiJTSsQoF52IAikWLUtoPagB7+UGWAxAEDAyI+1KhsB72BMJQWoaEd6lBag4Z20AOoQumhHuejYBQMJAAA92QKqg==
   </data>
  </layer>
  <objectgroup id="110" name="Object Layer 1">
