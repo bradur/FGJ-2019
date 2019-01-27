@@ -3,8 +3,7 @@
  <properties>
   <property name="text0" value="This 'Home' seems like an intriguing concept."/>
   <property name="text1" value="There seems to be a sensation of warmth inside me."/>
-  <property name="text2">But that doesn't correlate with the current temperature of outside air.
-Odd.</property>
+  <property name="text2" value="But that doesn't correlate with the current temperature of outside air.#n... Odd."/>
  </properties>
  <tileset firstgid="1" source="../TileSets/baseTileset.xml"/>
  <layer id="1" name="ground" width="25" height="20">
