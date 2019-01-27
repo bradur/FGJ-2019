@@ -45,7 +45,7 @@ public class UIDialogueBox : MonoBehaviour
         if (message.Length > 0)
         {
             textAnimationTimer = 0f;
-            fullMessage = message;
+            fullMessage = message.Replace("#n", "\n");
             txtDialogue.text = "";
             animatingText = true;
         }
