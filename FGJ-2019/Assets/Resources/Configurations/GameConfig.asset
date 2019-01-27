@@ -18,9 +18,8 @@ MonoBehaviour:
   - {fileID: 4900000, guid: 669dba75553403f4db7b9da2e074df98, type: 3}
   - {fileID: 4900000, guid: 56ff91939bdbfcc4c877125623d34bc7, type: 3}
   - {fileID: 4900000, guid: 9a8bf572250c1064a893a31ba065d11a, type: 3}
-  - {fileID: 4900000, guid: b2522c6c01440cd49b46dfe02f01d217, type: 3}
-  - {fileID: 4900000, guid: b2522c6c01440cd49b46dfe02f01d217, type: 3}
-  - {fileID: 4900000, guid: b2522c6c01440cd49b46dfe02f01d217, type: 3}
+  - {fileID: 4900000, guid: 70f14da3c2ada7245b48c7d30449f8ff, type: 3}
+  - {fileID: 4900000, guid: 536e390a7bb64b94d8b0fa7519e2dfa6, type: 3}
   - {fileID: 4900000, guid: b2522c6c01440cd49b46dfe02f01d217, type: 3}
   playerPosition: {fileID: 11400000, guid: b457a949edd90aa489d4ac4188edf191, type: 2}
   gridTilePrefab: {fileID: 114182515756426414, guid: 8e2fca2b9a26c0c479b3c65bec18bb85,
