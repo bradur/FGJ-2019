@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.2" tiledversion="1.2.1" orientation="orthogonal" renderorder="right-down" width="25" height="20" tilewidth="64" tileheight="64" infinite="0" nextlayerid="111" nextobjectid="38">
+ <properties>
+  <property name="text0" value="Maybe this planet has intelligent life after all."/>
+  <property name="text1" value="They seem impulsive and savage, but there might be something special about them."/>
+ </properties>
  <tileset firstgid="1" source="../TileSets/baseTileset.xml"/>
  <layer id="1" name="ground" width="25" height="20">
   <data encoding="csv">
@@ -51,14 +55,11 @@
  </layer>
  <objectgroup id="110" name="Object Layer 1">
   <object id="1" type="Player" gid="255" x="192" y="1088" width="64" height="64"/>
-  <object id="5" type="Lever" gid="81" x="0" y="448" width="64" height="64">
+  <object id="11" type="Window" gid="255" x="960" y="256" width="64" height="64">
    <properties>
-    <property name="activationId" type="int" value="1"/>
-   </properties>
-  </object>
-  <object id="11" type="Leash_" gid="255" x="0" y="256" width="64" height="64">
-   <properties>
-    <property name="leashId" type="int" value="1"/>
+    <property name="text0" value="This concludes my research."/>
+    <property name="text1" value="I will take my findings back to my people. Certainly the results will prove to be fruitful."/>
+    <property name="text2" value="I now know what 'Home' truly means."/>
    </properties>
   </object>
   <object id="12" type="Dog" gid="255" x="192" y="832" width="64" height="64">
@@ -67,50 +68,6 @@
     <property name="leashId" type="int" value="-1"/>
     <property name="leashRange" type="int" value="5"/>
     <property name="speed" type="float" value="8"/>
-   </properties>
-  </object>
-  <object id="19" type="Gate" gid="67" x="0" y="384" width="64" height="64">
-   <properties>
-    <property name="activationId" value="1"/>
-    <property name="closed" type="bool" value="false"/>
-    <property name="horizontal" type="bool" value="false"/>
-   </properties>
-  </object>
-  <object id="23" type="Light" gid="112" x="0" y="128" width="64" height="64">
-   <properties>
-    <property name="cycleOffset" type="float" value="7"/>
-    <property name="cycleTime" type="float" value="3"/>
-    <property name="radius" value="3"/>
-    <property name="rotation" value="90"/>
-   </properties>
-  </object>
-  <object id="33" type="Lever" gid="81" x="0" y="192" width="64" height="64">
-   <properties>
-    <property name="activationId" type="int" value="1"/>
-   </properties>
-  </object>
-  <object id="34" type="Gate" gid="65" x="0" y="576" width="64" height="64">
-   <properties>
-    <property name="activationId" value="2"/>
-    <property name="closed" type="bool" value="true"/>
-    <property name="horizontal" type="bool" value="true"/>
-   </properties>
-  </object>
-  <object id="35" type="Gate" gid="65" x="0" y="512" width="64" height="64">
-   <properties>
-    <property name="activationId" value="1"/>
-    <property name="closed" type="bool" value="false"/>
-    <property name="horizontal" type="bool" value="true"/>
-   </properties>
-  </object>
-  <object id="36" type="Lever" gid="81" x="0" y="320" width="64" height="64">
-   <properties>
-    <property name="activationId" type="int" value="1"/>
-   </properties>
-  </object>
-  <object id="37" type="Lever" gid="81" x="0" y="320" width="64" height="64">
-   <properties>
-    <property name="activationId" type="int" value="2"/>
    </properties>
   </object>
  </objectgroup>
