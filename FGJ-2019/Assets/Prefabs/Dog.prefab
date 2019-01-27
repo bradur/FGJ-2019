@@ -58,9 +58,9 @@ Rigidbody:
   m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 2
+  m_Interpolate: 1
   m_Constraints: 120
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
 --- !u!95 &95547550871716288
 Animator:
   serializedVersion: 3
@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94a6b64ec6ef5404d8aded30e3b92fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
 --- !u!114 &114484473500614538
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -202,7 +203,7 @@ SphereCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1539399367642778}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 6082034351418ee4eb345aec16bfc43c, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
