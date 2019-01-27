@@ -71,7 +71,20 @@ public class UIDialogueBox : MonoBehaviour
             string message = animatedMessages[0];
             AnimateMessage(message);
             animatedMessages.Remove(message);
-        } else if (!GameManager.main.PlayerIsDead) {
+        } else if (GameManager.main.LevelFinished)
+        {
+            MainGame.main.LoadNextLevel();
+        }
+        else if (!GameManager.main.PlayerIsDead)
+        {
+            Hide();
+        }
+    }
+
+    public void Hide()
+    {
+        if (!hidden)
+        {
             animator.SetTrigger(ANIMATION_HIDE);
         }
     }
@@ -103,7 +116,7 @@ public class UIDialogueBox : MonoBehaviour
         }
     }
 
-    private void Start()
+    public void Initialize()
     {
         animator = GetComponent<Animator>();
         config = GameManager.main.Config;
@@ -112,12 +125,6 @@ public class UIDialogueBox : MonoBehaviour
         txtDialogue.color = config.UIForegroundColor;
         textAnimationSpeed = config.UITextAnimationSpeed;
         txtDialogue.text = "";
-        //AnimateMessage("Hello world!");
-        AnimateListOfMessages(new List<string>() {
-            "I am an alien.",
-            "What is home?",
-            "Let's see if we can peek inside that house."
-        });
     }
 
 

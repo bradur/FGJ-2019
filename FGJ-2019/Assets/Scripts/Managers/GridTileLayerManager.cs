@@ -21,12 +21,17 @@ public class GridTileLayerManager : MonoBehaviour {
         config = GameManager.main.Config;
     }
 
+    public void Reset()
+    {
+        layers = new List<GridTileLayer>();
+    }
+
     private GridTileLayer AddLayer(string layerName, Transform container) {
         if (config == null)
         {
             config = GameManager.main.Config;
         }
-        GridTileLayer layer = Instantiate(config.GridTileLayerPrefab);
+        GridTileLayer layer = Instantiate(config.GridTileLayerPrefab, container);
         layer.Initialize(layerName, container);
         layers.Add(layer);
         return layer;

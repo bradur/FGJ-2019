@@ -25,18 +25,33 @@ public class TiledMap : MonoBehaviour
 
     private GridLayerConfig[] gridLayerConfigs;
 
+    private Transform scene;
+
     GameConfig config;
-    private void Start()
+
+    public void Initialize()
+    {
+    }
+
+    public void LoadLevel(string levelData, GameObject scene, bool showTexts)
     {
         config = GameManager.main.Config;
         gridLayerConfigs = Resources.LoadAll<GridLayerConfig>("Configurations/GridLayers");
         gridObjectConfigs = Resources.LoadAll<GridObjectConfig>("Configurations/GridObjects");
-        XDocument mapX = XDocument.Parse(config.FirstLevel.text);
+        this.scene = scene.transform;
+        containers = new List<Transform>();
+        XDocument mapX = XDocument.Parse(levelData);
         TmxMap map = new TmxMap(mapX);
-        Initialize(map);
+        InitializeMap(map);
+
+        if (showTexts)
+        {
+            var texts = Tools.getTexts(map.Properties);
+            UIManager.main.ShowMessages(texts);
+        }
     }
 
-    public void Initialize(TmxMap map)
+    public void InitializeMap(TmxMap map)
     {
         tiledMapTilesetManager.Initialize(map);
         DrawLayers(map);
@@ -47,22 +62,22 @@ public class TiledMap : MonoBehaviour
     private void DrawLayers(TmxMap map)
     {
         int mapHeight = map.Height;
-
+        int layerNumber = 0;
         foreach (TmxLayer layer in map.Layers)
         {
             GridLayerConfig gridLayerConfig = GetGridLayerConfig(layer.Name);
-
             foreach (TmxLayerTile tile in layer.Tiles)
             {
                 if (tile.Gid != 0)
                 {
-                    SpawnTile(tile, tile.X, -tile.Y, layer, gridLayerConfig);
+                    SpawnTile(tile, tile.X, -tile.Y, layer, gridLayerConfig, layerNumber);
                 }
             }
+            layerNumber += 1;
         }
     }
 
-    private void SpawnTile(TmxLayerTile tile, int x, int y, TmxLayer layer, GridLayerConfig gridLayerConfig)
+    private void SpawnTile(TmxLayerTile tile, int x, int y, TmxLayer layer, GridLayerConfig gridLayerConfig, int layerNumber)
     {
         Transform container = GetContainer("TileLayers");
         GridTile spawnedTile = null;
@@ -70,11 +85,11 @@ public class TiledMap : MonoBehaviour
         {
             if (gridLayerConfig.OverridePrefab)
             {
-                spawnedTile = Instantiate(gridLayerConfig.OverridePrefab);
+                spawnedTile = Instantiate(gridLayerConfig.OverridePrefab, scene.transform);
             }
             else
             {
-                spawnedTile = Instantiate(config.GridTilePrefab);
+                spawnedTile = Instantiate(config.GridTilePrefab, scene.transform);
             }
         }
         else
@@ -84,7 +99,7 @@ public class TiledMap : MonoBehaviour
         Sprite sprite = GetTileSprite(tile.Gid);
 
         ColliderConfig conf = GetColliderConfig(tile.Gid);
-        spawnedTile.Initialize(sprite, x, y, gridLayerConfig, conf, layer.Name);
+        spawnedTile.Initialize(sprite, x, y, gridLayerConfig, conf, layer.Name, layerNumber);
         GridTileLayerManager.main.AddTile(spawnedTile, layer.Name, container);
     }
 
@@ -199,7 +214,7 @@ public class TiledMap : MonoBehaviour
         }
         if (newContainer == null)
         {
-            newContainer = Instantiate(config.ContainerPrefab);
+            newContainer = Instantiate(config.ContainerPrefab, scene);
             newContainer.name = containerName;
             containers.Add(newContainer);
         }

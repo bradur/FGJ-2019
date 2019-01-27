@@ -24,6 +24,9 @@ public class GameManager : MonoBehaviour
     private bool playerIsDead = false;
     public bool PlayerIsDead { get { return playerIsDead; } }
 
+    private bool levelFinished = false;
+    public bool LevelFinished { get { return levelFinished; } }
+
     void Awake()
     {
         main = this;
@@ -40,7 +43,13 @@ public class GameManager : MonoBehaviour
         //Debug.Log(string.Format("Player died: {0}", reason));
         Time.timeScale = 0f;
         uIManager.ShowMessage(string.Format("{0}\n{1}", reason, "Press R to restart level."));
+        SoundManager.main.PlaySound(SoundType.PlayerDie);
         playerIsDead = true;
+    }
+
+    public void FinishLevel()
+    {
+        levelFinished = true;
     }
 
     void Start()
@@ -48,19 +57,13 @@ public class GameManager : MonoBehaviour
 
     }
 
-    private void RestartLevel()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
     void Update()
     {
-        if (playerIsDead)
-        {
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                RestartLevel();
-            }
-        }
+    }
+
+    public void Reset()
+    {
+        levelFinished = false;
+        uIManager.Hide();
     }
 }

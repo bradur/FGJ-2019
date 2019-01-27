@@ -15,6 +15,11 @@ public class GridObjectManager : MonoBehaviour {
         main = this;
     }
 
+    public void Reset()
+    {
+        gridObjects = new List<GridObject>();
+    }
+
     public void MapLoaded()
     {
         foreach (GridObject gridObject in gridObjects)

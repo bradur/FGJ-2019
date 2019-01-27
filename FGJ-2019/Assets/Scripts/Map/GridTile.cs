@@ -16,7 +16,7 @@ public class GridTile : MonoBehaviour
     public int X { get { return x; } }
     public int Y { get { return y; } }
 
-    public void Initialize(Sprite sprite, int x, int y, GridLayerConfig gridLayerConfig, ColliderConfig colliderConfig, string layerName)
+    public void Initialize(Sprite sprite, int x, int y, GridLayerConfig gridLayerConfig, ColliderConfig colliderConfig, string layerName, int layerNumber)
     {
         this.x = x;
         this.y = y;
@@ -24,6 +24,7 @@ public class GridTile : MonoBehaviour
         if (spriteRenderer != null)
         {
             spriteRenderer.sprite = sprite;
+            spriteRenderer.sortingOrder = layerNumber;
             if (gridLayerConfig != null && gridLayerConfig.OverrideMaterial != null)
             {
                 spriteRenderer.material = gridLayerConfig.OverrideMaterial;
@@ -38,15 +39,21 @@ public class GridTile : MonoBehaviour
                 col.center = new Vector3(param.centerX, param.centerY);
                 col.size = new Vector3(param.width, param.height, 2f);
             }
+            gameObject.layer = LayerMask.NameToLayer("Wall");
             spriteRenderer.sortingOrder = y * 10 - 10;
             gameObject.layer = LayerMask.NameToLayer("Wall");
         }
         else if(layerName == "ground")
         {
-            spriteRenderer.sortingOrder = y * 10 - 10;
+            spriteRenderer.sortingOrder = -2000;
+
         }
         else
         {
+            if (spriteRenderer == null)
+            {
+                print("asd");
+            }
             spriteRenderer.sortingOrder = y * 9;
         }
 
