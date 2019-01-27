@@ -12,8 +12,15 @@ MonoBehaviour:
   m_Name: GameConfig
   m_EditorClassIdentifier: 
   levels:
-  - {fileID: 4900000, guid: 69a97dc9690bc704f9c7220e1bd10d7c, type: 3}
-  - {fileID: 4900000, guid: 181cc8e8a9e0a4e4d8d63aa62792256f, type: 3}
+  - {fileID: 4900000, guid: 025434faf9212904eb770e1bff647d73, type: 3}
+  - {fileID: 4900000, guid: ba81fe8ee1cf5534a91c83f9bc0afa70, type: 3}
+  - {fileID: 4900000, guid: b2522c6c01440cd49b46dfe02f01d217, type: 3}
+  - {fileID: 4900000, guid: b2522c6c01440cd49b46dfe02f01d217, type: 3}
+  - {fileID: 4900000, guid: b2522c6c01440cd49b46dfe02f01d217, type: 3}
+  - {fileID: 4900000, guid: b2522c6c01440cd49b46dfe02f01d217, type: 3}
+  - {fileID: 4900000, guid: b2522c6c01440cd49b46dfe02f01d217, type: 3}
+  - {fileID: 4900000, guid: b2522c6c01440cd49b46dfe02f01d217, type: 3}
+  - {fileID: 4900000, guid: b2522c6c01440cd49b46dfe02f01d217, type: 3}
   - {fileID: 4900000, guid: b2522c6c01440cd49b46dfe02f01d217, type: 3}
   playerPosition: {fileID: 11400000, guid: b457a949edd90aa489d4ac4188edf191, type: 2}
   gridTilePrefab: {fileID: 114182515756426414, guid: 8e2fca2b9a26c0c479b3c65bec18bb85,
