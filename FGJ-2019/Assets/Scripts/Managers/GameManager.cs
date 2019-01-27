@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         cameraManager.FollowPlayer(player.transform);
+        SoundManager.main.UnpauseMusic();
     }
 
     public void PlayerDied(string reason)
@@ -50,6 +51,8 @@ public class GameManager : MonoBehaviour
     public void FinishLevel()
     {
         levelFinished = true;
+        SoundManager.main.PauseMusic();
+        SoundManager.main.PlaySound(SoundType.WindowReached);
     }
 
     void Start()

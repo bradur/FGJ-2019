@@ -23,6 +23,8 @@ public class SoundManager : MonoBehaviour
     [SerializeField]
     private AudioSource musicSource;
 
+    private float originalMusicVolume = 0.5f;
+
     void Awake()
     {
         main = this;
@@ -41,6 +43,44 @@ public class SoundManager : MonoBehaviour
             {
                 musicSource.Play();
             }
+        }
+    }
+
+    IEnumerator FadeOut(AudioSource audioSource, float fadeTime)
+    {
+        float startVolume = audioSource.volume;
+        while (audioSource.volume > 0)
+        {
+            audioSource.volume -= startVolume * Time.unscaledDeltaTime / fadeTime;
+            yield return null;
+        }
+
+        audioSource.Pause();
+        audioSource.volume = startVolume;
+    }
+
+    IEnumerator FadeIn(AudioSource audioSource, float fadeTime, float targetVolume)
+    {
+        float startVolume = audioSource.volume;
+        while (audioSource.volume < targetVolume)
+        {
+            audioSource.volume += Time.unscaledDeltaTime / fadeTime;
+            yield return null;
+        }
+        
+        audioSource.volume = targetVolume;
+    }
+
+    public void PauseMusic() {
+        if (musicSource.isPlaying) {
+            StartCoroutine(FadeOut(musicSource, 0.5f));
+        }
+    }
+
+    public void UnpauseMusic() {
+        if (!musicSource.isPlaying) {
+            musicSource.UnPause();
+            StartCoroutine(FadeIn(musicSource, 0.5f, originalMusicVolume));
         }
     }
 
