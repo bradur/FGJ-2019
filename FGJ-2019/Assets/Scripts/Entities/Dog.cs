@@ -26,6 +26,8 @@ public class Dog : MonoBehaviour
     string PROPERTY_AGGRORANGE = "aggroRange";
     string PROPERTY_SPEED = "speed";
 
+    private bool aggroed = false;
+
     // Use this for initialization
     void Start ()
     {
@@ -70,6 +72,10 @@ public class Dog : MonoBehaviour
         var distanceToPlayer = Vector2.Distance(curPos, playerPosition.Position);
         if (distanceToPlayer < aggroRange)
         {
+            if (!aggroed) {
+                aggroed = true;
+                SoundManager.main.PlaySound(SoundType.DogBark);
+            }
             var playerInsideLeashRange = !leashed || Vector2.Distance(leashOrigin, playerPosition.Position) <= leashRange;
             Vector2 targetPos;
             if (playerInsideLeashRange)
@@ -84,6 +90,7 @@ public class Dog : MonoBehaviour
             rigidbody.velocity = desiredMoveDirection.normalized * moveSpeed;
         } else
         {
+            aggroed = false;
             rigidbody.velocity = Vector3.zero;
         }
 

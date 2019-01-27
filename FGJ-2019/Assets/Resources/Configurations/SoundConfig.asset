@@ -31,3 +31,6 @@ MonoBehaviour:
   - soundType: 6
     sound: {fileID: 8300000, guid: 9899705d0dad38345b05e8cde7621235, type: 3}
     sounds: []
+  - soundType: 2
+    sound: {fileID: 8300000, guid: bcac06b51921c204cabb1efc46a181d0, type: 3}
+    sounds: []
