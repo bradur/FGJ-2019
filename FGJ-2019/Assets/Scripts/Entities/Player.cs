@@ -63,14 +63,6 @@ public class Player : MonoBehaviour {
         updatePlayerPosition();
         spriteRenderer.sortingOrder = (int)Math.Floor(transform.position.y * 10);
 
-        if(Input.GetKeyDown(KeyCode.Space)) {
-            string property = "activationId";
-            Debug.Log(gridObject.GetIntProperty(property));
-            List<GridObject> activateObjects = GridObjectManager.main.GetGridObjectsByPropertyValue(property, gridObject.GetIntProperty(property));
-            foreach (GridObject activateObject in activateObjects) {
-                Debug.Log(activateObject);
-            }
-        }
     }
 
     private void updatePlayerPosition()

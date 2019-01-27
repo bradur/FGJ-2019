@@ -47,6 +47,12 @@ public class VisionLight : MonoBehaviour {
     [SerializeField]
     private float radius = 5;
 
+    [SerializeField]
+    private float turnAngle = 0;
+
+    [SerializeField]
+    private float turnSpeed = 0;
+
     private List<Transform> visibleTargets = new List<Transform>();
     public List<Transform> VisibleTargets { get { return visibleTargets; } }
 
@@ -55,10 +61,13 @@ public class VisionLight : MonoBehaviour {
     private static string PROPERTY_ROTATION = "rotation";
     private static string PROPERTY_CYCLE_OFFSET = "cycleOffset";
     private static string PROPERTY_CYCLE_TIME = "cycleTime";
+    private static string PROPERTY_TURN_ANGLE = "turnAngle";
+    private static string PROPERTY_TURNSPEED = "turnSpeed";
 
     private GridObject gridObject;
 
     private bool started = false;
+    private float initialRotation;
 
     private float cycleStartTime = 0;
     private float cycleTime = 9999999f;
@@ -79,6 +88,8 @@ public class VisionLight : MonoBehaviour {
             currentRotation.y = rotationFromMap;
             transform.localEulerAngles = currentRotation;
         }
+
+        initialRotation = transform.localEulerAngles.y;
         viewRadius = radius;
         float cycleOffset = gridObject.GetFloatProperty(PROPERTY_CYCLE_OFFSET);
         if(cycleOffset > -1)
@@ -89,6 +100,18 @@ public class VisionLight : MonoBehaviour {
         if(cycleLength > -1)
         {
             cycleTime = cycleLength;
+        }
+
+        float turnAngleFromMap = gridObject.GetFloatProperty(PROPERTY_TURN_ANGLE);
+        if (turnAngleFromMap > -1)
+        {
+            turnAngle = turnAngleFromMap;
+        }
+
+        float turnSpeedFromMap = gridObject.GetFloatProperty(PROPERTY_TURNSPEED);
+        if (turnSpeedFromMap > -1)
+        {
+            turnSpeed = turnSpeedFromMap;
         }
 
         //transform.localPosition = new Vector3(x, y, 0);
@@ -116,7 +139,9 @@ public class VisionLight : MonoBehaviour {
         {
             viewMeshFilter.gameObject.SetActive(!viewMeshFilter.gameObject.activeSelf);
             cycleStartTime = currentTime;
-        }        
+        }
+
+        handleTurning();
     }
 
     // Update is called once per frame
@@ -306,6 +331,17 @@ public class VisionLight : MonoBehaviour {
             angleInDegrees += transform.eulerAngles.y;
         }
         return new Vector3(Mathf.Sin(angleInDegrees * Mathf.Deg2Rad), Mathf.Cos(angleInDegrees * Mathf.Deg2Rad), 0);
+    }
+
+    private void handleTurning()
+    {
+        if (turnAngle > 0 && turnSpeed > 0)
+        {
+            var rotY = turnAngle * Mathf.Sin(Time.time / turnSpeed);
+            Vector3 currentRotation = transform.localEulerAngles;
+            currentRotation.y = initialRotation + rotY;
+            transform.localEulerAngles = currentRotation;
+        }
     }
 
 }
