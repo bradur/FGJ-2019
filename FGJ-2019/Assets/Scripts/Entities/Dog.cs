@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,6 +24,7 @@ public class Dog : MonoBehaviour
     string PROPERTY_LEASHID = "leashId";
     string PROPERTY_LEASHRANGE = "leashRange";
     string PROPERTY_AGGRORANGE = "aggroRange";
+    string PROPERTY_SPEED = "speed";
 
     // Use this for initialization
     void Start ()
@@ -53,6 +55,11 @@ public class Dog : MonoBehaviour
             List<GridObject> leashObjects = GridObjectManager.main.GetGridObjectsByPropertyValue(PROPERTY_LEASHID, leashId);
             leashOrigin = leashObjects[0].transform.position;
             leashed = true;
+        }
+        float aggroSpeed = gridObject.GetFloatProperty(PROPERTY_SPEED);
+        if(aggroSpeed > -1)
+        {
+            moveSpeed = aggroSpeed;
         }
     }
 	
@@ -104,6 +111,8 @@ public class Dog : MonoBehaviour
             lineRenderer.SetPosition(0, leashOrigin);
             lineRenderer.SetPosition(1, transform.position);
         }
+        renderer.sortingOrder = (int)Math.Floor(transform.position.y * 10);
+        lineRenderer.sortingOrder = (int)Math.Floor(transform.position.y * 10);
     }
 
     private void FixedUpdate()

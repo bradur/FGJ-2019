@@ -5,12 +5,15 @@
 using UnityEngine;
 using System.Collections;
 using TiledSharp;
+using System;
 
 public class GridObject : MonoBehaviour
 {
 
     private GridObjectConfig config;
     public GridObjectConfig Config { get { return config; } }
+    [SerializeField]
+    private SpriteRenderer spriteRenderer;
 
     public PropertyDict Properties;
 
@@ -22,6 +25,11 @@ public class GridObject : MonoBehaviour
         Player player = GetComponent<Player>();
         if (player != null) {
             GameManager.main.SetupPlayer(player);
+        }
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.sortingOrder = (int)Math.Floor(transform.position.y * 10);
         }
     }
 
