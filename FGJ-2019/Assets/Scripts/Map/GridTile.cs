@@ -24,7 +24,8 @@ public class GridTile : MonoBehaviour
         if (spriteRenderer != null)
         {
             spriteRenderer.sprite = sprite;
-            spriteRenderer.sortingOrder = layerNumber;
+            //spriteRenderer.sortingOrder = layerNumber;
+            spriteRenderer.sortingOrder = -(y * 2);
             if (gridLayerConfig != null && gridLayerConfig.OverrideMaterial != null)
             {
                 spriteRenderer.material = gridLayerConfig.OverrideMaterial;
@@ -40,8 +41,10 @@ public class GridTile : MonoBehaviour
                 col.size = new Vector3(param.width, param.height, 2f);
             }
             gameObject.layer = LayerMask.NameToLayer("Wall");
-            spriteRenderer.sortingOrder = -(y * 10);
+            //spriteRenderer.sortingOrder = -(y * 10);
+            //spriteRenderer.sortingOrder = layerNumber;
             gameObject.layer = LayerMask.NameToLayer("Wall");
+            //spriteRenderer.sortingOrder;
         }
         else if(layerName == "ground")
         {
@@ -54,7 +57,11 @@ public class GridTile : MonoBehaviour
             {
                 print("asd");
             }
-            spriteRenderer.sortingOrder = -(y * 9) + 15;
+            if (layerName != "decorations") {
+                spriteRenderer.sortingOrder += layerNumber + 1;
+            } else {
+                spriteRenderer.sortingOrder += 1;
+            }
         }
 
         transform.position = new Vector2(x, y);

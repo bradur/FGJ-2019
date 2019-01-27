@@ -57,6 +57,8 @@ public class Dog : MonoBehaviour
             List<GridObject> leashObjects = GridObjectManager.main.GetGridObjectsByPropertyValue(PROPERTY_LEASHID, leashId);
             leashOrigin = leashObjects[0].transform.position;
             leashed = true;
+        } else {
+            lineRenderer.enabled = false;
         }
         float aggroSpeed = gridObject.GetFloatProperty(PROPERTY_SPEED);
         if(aggroSpeed > -1)
@@ -118,8 +120,10 @@ public class Dog : MonoBehaviour
             lineRenderer.SetPosition(0, leashOrigin);
             lineRenderer.SetPosition(1, transform.position);
         }
-        renderer.sortingOrder = (int)Math.Floor(transform.position.y * 10);
-        lineRenderer.sortingOrder = (int)Math.Floor(transform.position.y * 10);
+        //renderer.sortingOrder = (int)Math.Floor(transform.position.y * 10);
+        //lineRenderer.sortingOrder = (int)Math.Floor(transform.position.y * 10);
+        lineRenderer.sortingOrder = -((int)Math.Floor(transform.position.y) * 2 + 1);
+        renderer.sortingOrder = -((int)Math.Floor(transform.position.y) * 2);
     }
 
     private void FixedUpdate()
