@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18551ff2c9e2dad4db802cd0250ee77e, type: 3}
+  m_Name: collider41
+  m_EditorClassIdentifier: 
+  colliders:
+  - centerX: 0
+    centerY: -0.31
+    width: 0.25
+    height: 0.37
+  - centerX: 0
+    centerY: 0.19
+    width: 1
+    height: 0.62
+  name: collider41
+  description: 

@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9efcec6a44d5f2247a69bdf4fd349e7f, type: 3}
   m_Name: GameConfig
   m_EditorClassIdentifier: 
-  firstLevel: {fileID: 4900000, guid: 1b680db822bee9b47a49694c01a312e6, type: 3}
+  firstLevel: {fileID: 4900000, guid: 181cc8e8a9e0a4e4d8d63aa62792256f, type: 3}
   playerPosition: {fileID: 11400000, guid: b457a949edd90aa489d4ac4188edf191, type: 2}
   gridTilePrefab: {fileID: 114182515756426414, guid: 8e2fca2b9a26c0c479b3c65bec18bb85,
     type: 2}
@@ -44,3 +44,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a53268a45546f7d4397d0396d995c44a, type: 2}
   - {fileID: 11400000, guid: 2a862de921e61444b9621fb13e971ab2, type: 2}
   - {fileID: 11400000, guid: dafba011ddf4a5341b3badbe9ef43f39, type: 2}
+  - {fileID: 11400000, guid: c2b41c1b291ead344a01d7d977ff2a31, type: 2}
+  - {fileID: 11400000, guid: a924c0e46e3ae0f48a3f43be18b33515, type: 2}
+  - {fileID: 11400000, guid: 2177d49e81ea07f4d99a6e39acbe7192, type: 2}
+  - {fileID: 11400000, guid: 8c53a04a47b389749be7b6e27cd07ca0, type: 2}
+  - {fileID: 11400000, guid: 01412017c8d82e14d96bd786a5e8abaa, type: 2}
+  - {fileID: 11400000, guid: 5e2a1cb2218766c4e88348a391d4486c, type: 2}
+  - {fileID: 11400000, guid: 4b1cf67e3cec28245ac1a8b71db8f05e, type: 2}
+  - {fileID: 11400000, guid: 64065022a3c56714783e82fbe5c55267, type: 2}

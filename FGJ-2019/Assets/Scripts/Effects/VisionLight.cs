@@ -53,10 +53,15 @@ public class VisionLight : MonoBehaviour {
     private static string PROPERTY_RADIUS = "radius";
     private static string PROPERTY_ANGLE = "angle";
     private static string PROPERTY_ROTATION = "rotation";
+    private static string PROPERTY_CYCLE_OFFSET = "cycleOffset";
+    private static string PROPERTY_CYCLE_TIME = "cycleTime";
 
     private GridObject gridObject;
 
     private bool started = false;
+
+    private float cycleStartTime = 0;
+    private float cycleTime = 9999999f;
 
     public void Init() {
         gridObject = GetComponent<GridObject>();
@@ -75,6 +80,17 @@ public class VisionLight : MonoBehaviour {
             transform.localEulerAngles = currentRotation;
         }
         viewRadius = radius;
+        float cycleOffset = gridObject.GetFloatProperty(PROPERTY_CYCLE_OFFSET);
+        if(cycleOffset > -1)
+        {
+            cycleStartTime = Time.time + cycleOffset;
+        }
+        float cycleLength = gridObject.GetFloatProperty(PROPERTY_CYCLE_TIME);
+        if(cycleLength > -1)
+        {
+            cycleTime = cycleLength;
+        }
+
         //transform.localPosition = new Vector3(x, y, 0);
         StartCoroutine("FindTargetsWithDelay", targetFindInterval);
         viewMesh = new Mesh
@@ -95,6 +111,12 @@ public class VisionLight : MonoBehaviour {
     }
 
     void Update () {
+        float currentTime = Time.time;
+        if (cycleTime < currentTime - cycleStartTime)
+        {
+            viewMeshFilter.gameObject.SetActive(!viewMeshFilter.gameObject.activeSelf);
+            cycleStartTime = currentTime;
+        }        
     }
 
     // Update is called once per frame
