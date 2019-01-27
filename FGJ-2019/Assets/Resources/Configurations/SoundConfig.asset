@@ -16,3 +16,21 @@ MonoBehaviour:
   - soundType: 1
     sound: {fileID: 8300000, guid: 4c1830e921739574d97ad9d70931b437, type: 3}
     sounds: []
+  - soundType: 7
+    sound: {fileID: 8300000, guid: 08f54b340b9016d4bb76750371d19c85, type: 3}
+    sounds: []
+  - soundType: 3
+    sound: {fileID: 8300000, guid: 4242f8f76a2fba44f986cf6286686392, type: 3}
+    sounds: []
+  - soundType: 4
+    sound: {fileID: 8300000, guid: ac47d45dbb00b2647bc28d605dccbe0b, type: 3}
+    sounds: []
+  - soundType: 5
+    sound: {fileID: 8300000, guid: 0155694dff3ed1f4285a29db6c46c9c5, type: 3}
+    sounds: []
+  - soundType: 6
+    sound: {fileID: 8300000, guid: 9899705d0dad38345b05e8cde7621235, type: 3}
+    sounds: []
+  - soundType: 2
+    sound: {fileID: 8300000, guid: bcac06b51921c204cabb1efc46a181d0, type: 3}
+    sounds: []

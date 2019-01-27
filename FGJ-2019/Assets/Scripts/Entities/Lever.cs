@@ -56,5 +56,6 @@ public class Lever : MonoBehaviour {
             gate.Activate();
         }
         on = !on;
+        SoundManager.main.PlaySound(on ? SoundType.SwitchOff : SoundType.SwitchOn);
     }
 }
