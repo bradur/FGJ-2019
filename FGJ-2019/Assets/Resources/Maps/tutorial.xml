@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.2" tiledversion="1.2.1" orientation="orthogonal" renderorder="right-down" width="11" height="13" tilewidth="64" tileheight="64" infinite="0" nextlayerid="117" nextobjectid="27">
  <properties>
-  <property name="text0">? 
-
- - Press space to continue -</property>
-  <property name="text1">What a strange planet. 
- 
- - Press space to continue -</property>
-  <property name="text2">There is a light up ahead. I should investigate. 
- 
- - Press space to continue -</property>
-  <property name="text3">Use the arrow keys or WASD to move. 
- 
- - Press space to continue -</property>
+  <property name="text0" value="?#n#n - Press space to continue -"/>
+  <property name="text1" value="What a strange planet.#n#n - Press space to continue -"/>
+  <property name="text2" value="There is a light up ahead. I should investigate.#n#n - Press space to continue -"/>
+  <property name="text3" value="Use the arrow keys or WASD to move.#n#n - Press space to continue -"/>
  </properties>
  <tileset firstgid="1" source="../TileSets/baseTileset.xml"/>
  <layer id="114" name="ground" width="11" height="13">
